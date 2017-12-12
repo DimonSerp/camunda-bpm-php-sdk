@@ -7,14 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\service;
+namespace org\provectus\php\sdk\service;
 
-use org\camunda\php\sdk\entity\response\Activity;
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\entity\request\ProcessInstanceRequest;
-use org\camunda\php\sdk\entity\request\VariableRequest;
-use org\camunda\php\sdk\entity\response\ProcessInstance;
-use org\camunda\php\sdk\entity\response\Variable;
+use org\provectus\php\sdk\entity\response\Activity;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\entity\request\ProcessInstanceRequest;
+use org\provectus\php\sdk\entity\request\VariableRequest;
+use org\provectus\php\sdk\entity\response\ProcessInstance;
+use org\provectus\php\sdk\entity\response\Variable;
 
 class ProcessInstanceService extends RequestService
 {
@@ -25,7 +25,7 @@ class ProcessInstanceService extends RequestService
      *
      * @param String $id Process instance ID
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\ProcessInstance $this requested process instance
+     * @return \org\provectus\php\sdk\entity\response\ProcessInstance $this requested process instance
      */
     public function getInstance(string $id): ProcessInstance
     {
@@ -111,7 +111,7 @@ class ProcessInstanceService extends RequestService
      * @param String $id process instance ID
      * @param String $variableId process variable ID
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\Variable $this requested variable
+     * @return \org\provectus\php\sdk\entity\response\Variable $this requested variable
      */
     public function getProcessVariable(string $id, string $variableId): Variable
     {

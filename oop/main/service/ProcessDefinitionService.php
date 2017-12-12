@@ -7,15 +7,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\service;
+namespace org\provectus\php\sdk\service;
 
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\entity\request\ProcessDefinitionRequest;
-use org\camunda\php\sdk\entity\request\StatisticRequest;
-use org\camunda\php\sdk\entity\response\Form;
-use org\camunda\php\sdk\entity\response\ProcessDefinition;
-use org\camunda\php\sdk\entity\response\ProcessInstance;
-use org\camunda\php\sdk\entity\response\Statistic;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\entity\request\ProcessDefinitionRequest;
+use org\provectus\php\sdk\entity\request\StatisticRequest;
+use org\provectus\php\sdk\entity\response\Form;
+use org\provectus\php\sdk\entity\response\ProcessDefinition;
+use org\provectus\php\sdk\entity\response\ProcessInstance;
+use org\provectus\php\sdk\entity\response\Statistic;
 
 class ProcessDefinitionService extends RequestService
 {
@@ -28,7 +28,7 @@ class ProcessDefinitionService extends RequestService
      *
      * @param String $id ID of the requested definition
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\ProcessDefinition $this Requested definition
+     * @return \org\provectus\php\sdk\entity\response\ProcessDefinition $this Requested definition
      */
     public function getDefinition(string $id): ProcessDefinition
     {
@@ -52,7 +52,7 @@ class ProcessDefinitionService extends RequestService
      *
      * @param String $key Key of the requested definition
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\ProcessDefinition $this Requested definition
+     * @return \org\provectus\php\sdk\entity\response\ProcessDefinition $this Requested definition
      */
     public function getDefinitionByKey(string $key): ProcessDefinition
     {
@@ -175,7 +175,7 @@ class ProcessDefinitionService extends RequestService
      * @param String                   $id process definition ID
      * @param ProcessDefinitionRequest $request variables
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\ProcessInstance $this started process instance
+     * @return \org\provectus\php\sdk\entity\response\ProcessInstance $this started process instance
      */
     public function startInstance(string $id, ProcessDefinitionRequest $request): ProcessInstance
     {
@@ -199,7 +199,7 @@ class ProcessDefinitionService extends RequestService
      * @param String                   $key process definition key
      * @param ProcessDefinitionRequest $request variables
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\ProcessInstance $this started process instance
+     * @return \org\provectus\php\sdk\entity\response\ProcessInstance $this started process instance
      */
     public function startInstanceByKey(string $key, ProcessDefinitionRequest $request): ProcessInstance
     {

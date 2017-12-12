@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\entity\request\AuthorizationRequest;
-use org\camunda\php\sdk\service\AuthorizationService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\entity\request\AuthorizationRequest;
+use org\provectus\php\sdk\service\AuthorizationService;
 
 include("../../vendor/autoload.php");
 

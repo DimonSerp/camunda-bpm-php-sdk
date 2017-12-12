@@ -7,22 +7,22 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk;
+namespace org\provectus\php\sdk;
 
-use org\camunda\php\sdk\service\AuthorizationService;
-use org\camunda\php\sdk\service\GroupService;
-use org\camunda\php\sdk\service\HistoryService;
-use org\camunda\php\sdk\service\IdentityService;
-use org\camunda\php\sdk\service\JobService;
-use org\camunda\php\sdk\service\ProcessEngineService;
-use org\camunda\php\sdk\service\TaskService;
-use org\camunda\php\sdk\service\ExecutionService;
-use org\camunda\php\sdk\service\MessageService;
-use org\camunda\php\sdk\service\ProcessDefinitionService;
-use org\camunda\php\sdk\service\ProcessInstanceService;
-use org\camunda\php\sdk\service\UserService;
-use org\camunda\php\sdk\service\VariableInstanceService;
-use org\camunda\php\sdk\service\DeploymentService;
+use org\provectus\php\sdk\service\AuthorizationService;
+use org\provectus\php\sdk\service\GroupService;
+use org\provectus\php\sdk\service\HistoryService;
+use org\provectus\php\sdk\service\IdentityService;
+use org\provectus\php\sdk\service\JobService;
+use org\provectus\php\sdk\service\ProcessEngineService;
+use org\provectus\php\sdk\service\TaskService;
+use org\provectus\php\sdk\service\ExecutionService;
+use org\provectus\php\sdk\service\MessageService;
+use org\provectus\php\sdk\service\ProcessDefinitionService;
+use org\provectus\php\sdk\service\ProcessInstanceService;
+use org\provectus\php\sdk\service\UserService;
+use org\provectus\php\sdk\service\VariableInstanceService;
+use org\provectus\php\sdk\service\DeploymentService;
 
 
 class Api

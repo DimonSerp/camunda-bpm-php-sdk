@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
+namespace org\provectus\php\tests;
 
-use org\camunda\php\sdk\service\MessageService;
+use org\provectus\php\sdk\service\MessageService;
 
 include('../../vendor/autoload.php');
 

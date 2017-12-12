@@ -7,14 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\service;
+namespace org\provectus\php\sdk\service;
 
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\entity\request\IdentityLinksRequest;
-use org\camunda\php\sdk\entity\request\TaskRequest;
-use org\camunda\php\sdk\entity\response\Form;
-use org\camunda\php\sdk\entity\response\IdentityLink;
-use org\camunda\php\sdk\entity\response\Task;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\entity\request\IdentityLinksRequest;
+use org\provectus\php\sdk\entity\request\TaskRequest;
+use org\provectus\php\sdk\entity\response\Form;
+use org\provectus\php\sdk\entity\response\IdentityLink;
+use org\provectus\php\sdk\entity\response\Task;
 
 class TaskService extends RequestService
 {
@@ -24,7 +24,7 @@ class TaskService extends RequestService
      *
      * @param String $id task id
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\Task $this requested task
+     * @return \org\provectus\php\sdk\entity\response\Task $this requested task
      */
     public function getTask(string $id): Task
     {
@@ -134,7 +134,7 @@ class TaskService extends RequestService
      * @link http://docs.camunda.org/api-references/rest/#!/task/post-claim
      *
      * @param String                                          $id task id
-     * @param \org\camunda\php\sdk\entity\request\TaskRequest $request
+     * @param \org\provectus\php\sdk\entity\request\TaskRequest $request
      * @throws CamundaApiException
      */
     public function claimTask(string $id, TaskRequest $request): void

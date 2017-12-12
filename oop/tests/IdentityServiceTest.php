@@ -7,10 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
+namespace org\provectus\php\tests;
 
-use org\camunda\php\sdk\entity\request\IdentityRequest;
-use org\camunda\php\sdk\service\IdentityService;
+use org\provectus\php\sdk\entity\request\IdentityRequest;
+use org\provectus\php\sdk\service\IdentityService;
 
 include("../../vendor/autoload.php");
 

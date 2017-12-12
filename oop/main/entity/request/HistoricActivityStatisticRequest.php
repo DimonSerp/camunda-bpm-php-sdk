@@ -1,6 +1,6 @@
 <?php
 
-namespace org\camunda\php\sdk\entity\request;
+namespace org\provectus\php\sdk\entity\request;
 
 class HistoricActivityStatisticRequest extends Request
 {

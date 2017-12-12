@@ -7,11 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\entity\request\ExecutionRequest;
-use org\camunda\php\sdk\entity\request\VariableRequest;
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\service\ExecutionService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\entity\request\ExecutionRequest;
+use org\provectus\php\sdk\entity\request\VariableRequest;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\service\ExecutionService;
 
 include("../../vendor/autoload.php");
 

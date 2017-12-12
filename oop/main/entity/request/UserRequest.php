@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\entity\request;
+namespace org\provectus\php\sdk\entity\request;
 
 
 class UserRequest extends Request
@@ -263,7 +263,7 @@ class UserRequest extends Request
     }
 
     /**
-     * @param \org\camunda\php\sdk\entity\request\CredentialsRequest $credentials
+     * @param \org\provectus\php\sdk\entity\request\CredentialsRequest $credentials
      * @return $this
      */
     public function setCredentials(CredentialsRequest $credentials)
@@ -273,7 +273,7 @@ class UserRequest extends Request
     }
 
     /**
-     * @return \org\camunda\php\sdk\entity\request\CredentialsRequest
+     * @return \org\provectus\php\sdk\entity\request\CredentialsRequest
      */
     public function getCredentials()
     {
@@ -281,7 +281,7 @@ class UserRequest extends Request
     }
 
     /**
-     * @param \org\camunda\php\sdk\entity\request\ProfileRequest $profile
+     * @param \org\provectus\php\sdk\entity\request\ProfileRequest $profile
      * @return $this
      */
     public function setProfile(ProfileRequest $profile)
@@ -291,7 +291,7 @@ class UserRequest extends Request
     }
 
     /**
-     * @return \org\camunda\php\sdk\entity\request\ProfileRequest
+     * @return \org\provectus\php\sdk\entity\request\ProfileRequest
      */
     public function getProfile()
     {

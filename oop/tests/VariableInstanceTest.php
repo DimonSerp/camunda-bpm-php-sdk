@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\entity\request\VariableInstanceRequest;
-use org\camunda\php\sdk\service\VariableInstanceService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\entity\request\VariableInstanceRequest;
+use org\provectus\php\sdk\service\VariableInstanceService;
 
 include('../../vendor/autoload.php');
 

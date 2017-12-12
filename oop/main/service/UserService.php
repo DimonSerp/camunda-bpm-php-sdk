@@ -7,14 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\service;
+namespace org\provectus\php\sdk\service;
 
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\entity\request\CredentialsRequest;
-use org\camunda\php\sdk\entity\request\ProfileRequest;
-use org\camunda\php\sdk\entity\request\UserRequest;
-use org\camunda\php\sdk\entity\response\ResourceOption;
-use org\camunda\php\sdk\entity\response\User;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\entity\request\CredentialsRequest;
+use org\provectus\php\sdk\entity\request\ProfileRequest;
+use org\provectus\php\sdk\entity\request\UserRequest;
+use org\provectus\php\sdk\entity\response\ResourceOption;
+use org\provectus\php\sdk\entity\response\User;
 
 class UserService extends RequestService
 {
@@ -68,7 +68,7 @@ class UserService extends RequestService
      *
      * @param String $id user ID
      * @throws CamundaApiException
-     * @return \org\camunda\php\sdk\entity\response\User $this requested profile
+     * @return \org\provectus\php\sdk\entity\response\User $this requested profile
      */
     public function getProfile(string $id): User
     {

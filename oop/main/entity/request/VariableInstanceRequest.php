@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\entity\request;
+namespace org\provectus\php\sdk\entity\request;
 
 
 class VariableInstanceRequest extends Request

@@ -7,15 +7,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
+namespace org\provectus\php\tests;
 include('../../vendor/autoload.php');
 
-use org\camunda\php\sdk\entity\request\CredentialsRequest;
-use org\camunda\php\sdk\entity\request\GroupRequest;
-use org\camunda\php\sdk\entity\request\ProfileRequest;
-use org\camunda\php\sdk\entity\request\UserRequest;
-use org\camunda\php\sdk\service\GroupService;
-use org\camunda\php\sdk\service\UserService;
+use org\provectus\php\sdk\entity\request\CredentialsRequest;
+use org\provectus\php\sdk\entity\request\GroupRequest;
+use org\provectus\php\sdk\entity\request\ProfileRequest;
+use org\provectus\php\sdk\entity\request\UserRequest;
+use org\provectus\php\sdk\service\GroupService;
+use org\provectus\php\sdk\service\UserService;
 
 class GroupServiceTest extends \PHPUnit_Framework_TestCase
 {

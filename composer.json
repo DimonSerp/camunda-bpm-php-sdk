@@ -1,6 +1,6 @@
 {
-  "name": "camunda/camunda-bpm-php7",
-  "description": "PHP 7.x SDK for camundaBPM process services",
+  "name": "provectus/camunda-bpm-php7",
+  "description": "PHP 7.x SDK for camundaBPM process services by Provectus inc.",
   "license": "Apache-2.0",
   "minimum-stability": "stable",
   "keywords": ["sdk","camunda", "camunda bpm"],

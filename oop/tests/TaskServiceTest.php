@@ -7,14 +7,14 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\entity\request\CredentialsRequest;
-use org\camunda\php\sdk\entity\request\ProfileRequest;
-use org\camunda\php\sdk\entity\request\TaskRequest;
-use org\camunda\php\sdk\entity\request\UserRequest;
-use org\camunda\php\sdk\entity\request\IdentityLinksRequest;
-use org\camunda\php\sdk\service\TaskService;
-use org\camunda\php\sdk\service\UserService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\entity\request\CredentialsRequest;
+use org\provectus\php\sdk\entity\request\ProfileRequest;
+use org\provectus\php\sdk\entity\request\TaskRequest;
+use org\provectus\php\sdk\entity\request\UserRequest;
+use org\provectus\php\sdk\entity\request\IdentityLinksRequest;
+use org\provectus\php\sdk\service\TaskService;
+use org\provectus\php\sdk\service\UserService;
 
 include('../../vendor/autoload.php');
 

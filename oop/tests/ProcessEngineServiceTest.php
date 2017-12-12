@@ -7,8 +7,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\service\ProcessEngineService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\service\ProcessEngineService;
 
 include('../../vendor/autoload.php');
 

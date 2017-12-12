@@ -7,12 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\tests;
-use org\camunda\php\sdk\entity\request\ProcessDefinitionRequest;
-use org\camunda\php\sdk\entity\request\ProcessInstanceRequest;
-use org\camunda\php\sdk\entity\request\StatisticRequest;
-use org\camunda\php\sdk\service\ProcessDefinitionService;
-use org\camunda\php\sdk\service\ProcessInstanceService;
+namespace org\provectus\php\tests;
+use org\provectus\php\sdk\entity\request\ProcessDefinitionRequest;
+use org\provectus\php\sdk\entity\request\ProcessInstanceRequest;
+use org\provectus\php\sdk\entity\request\StatisticRequest;
+use org\provectus\php\sdk\service\ProcessDefinitionService;
+use org\provectus\php\sdk\service\ProcessInstanceService;
 
 include('../../vendor/autoload.php');
 

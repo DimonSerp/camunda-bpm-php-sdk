@@ -7,12 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\camunda\php\sdk\service;
+namespace org\provectus\php\sdk\service;
 
-use org\camunda\php\sdk\exception\CamundaApiException;
-use org\camunda\php\sdk\entity\request\GroupRequest;
-use org\camunda\php\sdk\entity\response\Group;
-use org\camunda\php\sdk\entity\response\ResourceOption;
+use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\php\sdk\entity\request\GroupRequest;
+use org\provectus\php\sdk\entity\response\Group;
+use org\provectus\php\sdk\entity\response\ResourceOption;
 
 class GroupService extends RequestService
 {
