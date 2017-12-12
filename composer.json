@@ -1,18 +1,18 @@
 {
-  "name": "camunda/camunda-bpm-php-sdk",
-  "description": "PHP SDK for camundaBPM process services",
+  "name": "camunda/camunda-bpm-php7",
+  "description": "PHP 7.x SDK for camundaBPM process services",
   "license": "Apache-2.0",
   "minimum-stability": "stable",
   "keywords": ["sdk","camunda", "camunda bpm"],
   "homepage": "http://camunda.org",
   "authors": [
     {
-      "name": "Stefan Hentschel",
-      "email": "stefan.hentschel@camunda.com"
-    },
-    {
       "name": "Dmytriy Serpokrylenko",
       "email": "dserpokrylenko@provectus.com"
+    },
+    {
+      "name": "Stefan Hentschel",
+      "email": "stefan.hentschel@camunda.com"
     }
   ],
 
