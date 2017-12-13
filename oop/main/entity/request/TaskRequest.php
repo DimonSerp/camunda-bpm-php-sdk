@@ -11,756 +11,822 @@ namespace org\provectus\php\sdk\entity\request;
 
 class TaskRequest extends Request
 {
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $processInstanceBusinessKey;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processDefinitionKey;
+
+    /** @var string */
     protected $processDefinitionKeyIn;
+
+    /** @var string */
     protected $processDefinitionName;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $assignee;
+
+    /** @var string */
     protected $owner;
+
+    /** @var string */
     protected $candidateGroup;
+
+    /** @var string */
     protected $candidateUser;
+
+    /** @var string */
     protected $involvedUser;
+
+    /** @var bool */
+    protected $assigned;
+
+    /** @var bool */
     protected $unassigned;
+
+    /** @var string */
     protected $taskDefinitionKey;
+
+    /** @var string */
     protected $taskDefinitionKeyLike;
+
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $nameLike;
+
+    /** @var string */
     protected $description;
+
+    /** @var string */
     protected $descriptionLike;
+
+    /** @var int */
     protected $priority;
+
+    /** @var int */
     protected $maxPriority;
+
+    /** @var int */
     protected $minPriority;
-    protected $due;
+
+    /** @var string */
+    protected $dueDate;
+
+    /** @var string */
     protected $dueAfter;
+
+    /** @var string */
     protected $dueBefore;
-    protected $created;
+
+    /** @var string */
+    protected $createdOn;
+
+    /** @var string */
     protected $createdAfter;
+
+    /** @var string */
     protected $createdBefore;
+
+    /** @var string */
     protected $delegationState;
+
+    /** @var string */
     protected $candidateGroups;
+
+    /** @var array */
     protected $taskVariables;
+
+    /** @var array */
     protected $processVariables;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
-    protected $userId;
-    protected $variables;
+
+    /** @var bool */
     protected $active;
+
+    /** @var string */
     protected $tenantIdIn;
 
     /**
-     * @param mixed $assignee
-     * @return $this
+     * @return string
      */
-    public function setAssignee($assignee)
+    public function getProcessInstanceId(): string
     {
-        $this->assignee = $assignee;
-        return $this;
+        return $this->processInstanceId;
     }
 
     /**
-     * @return mixed
+     * @param string $processInstanceId
+     * @return TaskRequest
      */
-    public function getAssignee()
-    {
-        return $this->assignee;
-    }
-
-    /**
-     * @param mixed $candidateGroup
-     * @return $this
-     */
-    public function setCandidateGroup($candidateGroup)
-    {
-        $this->candidateGroup = $candidateGroup;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCandidateGroup()
-    {
-        return $this->candidateGroup;
-    }
-
-    /**
-     * @param mixed $candidateGroups
-     * @return $this
-     */
-    public function setCandidateGroups($candidateGroups)
-    {
-        $this->candidateGroups = $candidateGroups;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCandidateGroups()
-    {
-        return $this->candidateGroups;
-    }
-
-    /**
-     * @param mixed $candidateUser
-     * @return $this
-     */
-    public function setCandidateUser($candidateUser)
-    {
-        $this->candidateUser = $candidateUser;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCandidateUser()
-    {
-        return $this->candidateUser;
-    }
-
-    /**
-     * @param mixed $created
-     * @return $this
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * @param mixed $createdAfter
-     * @return $this
-     */
-    public function setCreatedAfter($createdAfter)
-    {
-        $this->createdAfter = $createdAfter;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedAfter()
-    {
-        return $this->createdAfter;
-    }
-
-    /**
-     * @param mixed $createdBefore
-     * @return $this
-     */
-    public function setCreatedBefore($createdBefore)
-    {
-        $this->createdBefore = $createdBefore;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedBefore()
-    {
-        return $this->createdBefore;
-    }
-
-    /**
-     * @param mixed $delegationState
-     * @return $this
-     */
-    public function setDelegationState($delegationState)
-    {
-        $this->delegationState = $delegationState;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDelegationState()
-    {
-        return $this->delegationState;
-    }
-
-    /**
-     * @param mixed $description
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $descriptionLike
-     * @return $this
-     */
-    public function setDescriptionLike($descriptionLike)
-    {
-        $this->descriptionLike = $descriptionLike;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescriptionLike()
-    {
-        return $this->descriptionLike;
-    }
-
-    /**
-     * @param mixed $due
-     * @return $this
-     */
-    public function setDue($due)
-    {
-        $this->due = $due;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDue()
-    {
-        return $this->due;
-    }
-
-    /**
-     * @param mixed $dueAfter
-     * @return $this
-     */
-    public function setDueAfter($dueAfter)
-    {
-        $this->dueAfter = $dueAfter;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDueAfter()
-    {
-        return $this->dueAfter;
-    }
-
-    /**
-     * @param mixed $dueBefore
-     * @return $this
-     */
-    public function setDueBefore($dueBefore)
-    {
-        $this->dueBefore = $dueBefore;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDueBefore()
-    {
-        return $this->dueBefore;
-    }
-
-    /**
-     * @param mixed $executionId
-     * @return $this
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $firstResult
-     * @return $this
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $involvedUser
-     * @return $this
-     */
-    public function setInvolvedUser($involvedUser)
-    {
-        $this->involvedUser = $involvedUser;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getInvolvedUser()
-    {
-        return $this->involvedUser;
-    }
-
-    /**
-     * @param mixed $maxPriority
-     * @return $this
-     */
-    public function setMaxPriority($maxPriority)
-    {
-        $this->maxPriority = $maxPriority;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxPriority()
-    {
-        return $this->maxPriority;
-    }
-
-    /**
-     * @param mixed $maxResults
-     * @return $this
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $minPriority
-     * @return $this
-     */
-    public function setMinPriority($minPriority)
-    {
-        $this->minPriority = $minPriority;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMinPriority()
-    {
-        return $this->minPriority;
-    }
-
-    /**
-     * @param mixed $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $nameLike
-     * @return $this
-     */
-    public function setNameLike($nameLike)
-    {
-        $this->nameLike = $nameLike;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNameLike()
-    {
-        return $this->nameLike;
-    }
-
-    /**
-     * @param mixed $owner
-     * @return $this
-     */
-    public function setOwner($owner)
-    {
-        $this->owner = $owner;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getOwner()
-    {
-        return $this->owner;
-    }
-
-    /**
-     * @param mixed $priority
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        $this->priority = $priority;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPriority()
-    {
-        return $this->priority;
-    }
-
-    /**
-     * @param mixed $processDefinitionId
-     * @return $this
-     */
-    public function setProcessDefinitionId($processDefinitionId)
-    {
-        $this->processDefinitionId = $processDefinitionId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionId()
-    {
-        return $this->processDefinitionId;
-    }
-
-    /**
-     * @param mixed $processDefinitionKey
-     * @return $this
-     */
-    public function setProcessDefinitionKey($processDefinitionKey)
-    {
-        $this->processDefinitionKey = $processDefinitionKey;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionKey()
-    {
-        return $this->processDefinitionKey;
-    }
-
-    /**
-     * @param array $processDefinitionKey
-     * @return $this
-     */
-    public function setProcessDefinitionKeyIn($processDefinitionKey)
-    {
-        $this->processDefinitionKeyIn = join(',', $processDefinitionKey);
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionKeyIn()
-    {
-        return $this->processDefinitionKeyIn;
-    }
-
-    /**
-     * @param mixed $processDefinitionName
-     * @return $this
-     */
-    public function setProcessDefinitionName($processDefinitionName)
-    {
-        $this->processDefinitionName = $processDefinitionName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionName()
-    {
-        return $this->processDefinitionName;
-    }
-
-    /**
-     * @param mixed $processInstanceBusinessKey
-     * @return $this
-     */
-    public function setProcessInstanceBusinessKey($processInstanceBusinessKey)
-    {
-        $this->processInstanceBusinessKey = $processInstanceBusinessKey;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessInstanceBusinessKey()
-    {
-        return $this->processInstanceBusinessKey;
-    }
-
-    /**
-     * @param mixed $processInstanceId
-     * @return $this
-     */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessInstanceId(string $processInstanceId): TaskRequest
     {
         $this->processInstanceId = $processInstanceId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getProcessInstanceBusinessKey(): string
     {
-        return $this->processInstanceId;
+        return $this->processInstanceBusinessKey;
     }
 
     /**
-     * @param mixed $processVariables
-     * @return $this
+     * @param string $processInstanceBusinessKey
+     * @return TaskRequest
      */
-    public function setProcessVariables($processVariables)
+    public function setProcessInstanceBusinessKey(string $processInstanceBusinessKey): TaskRequest
     {
-        $this->processVariables = $processVariables;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessVariables()
-    {
-        return $this->processVariables;
-    }
-
-    /**
-     * @param mixed $sortBy
-     * @return $this
-     */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     * @return $this
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $taskDefinitionKey
-     * @return $this
-     */
-    public function setTaskDefinitionKey($taskDefinitionKey)
-    {
-        $this->taskDefinitionKey = $taskDefinitionKey;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTaskDefinitionKey()
-    {
-        return $this->taskDefinitionKey;
-    }
-
-    /**
-     * @param mixed $taskDefinitionKeyLike
-     * @return $this
-     */
-    public function setTaskDefinitionKeyLike($taskDefinitionKeyLike)
-    {
-        $this->taskDefinitionKeyLike = $taskDefinitionKeyLike;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTaskDefinitionKeyLike()
-    {
-        return $this->taskDefinitionKeyLike;
-    }
-
-    /**
-     * @param mixed $taskVariables
-     * @return $this
-     */
-    public function setTaskVariables($taskVariables)
-    {
-        $this->taskVariables = $taskVariables;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTaskVariables()
-    {
-        return $this->taskVariables;
-    }
-
-    /**
-     * @param mixed $unassigned
-     * @return $this
-     */
-    public function setUnassigned($unassigned)
-    {
-        $this->unassigned = $unassigned;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUnassigned()
-    {
-        return $this->unassigned;
-    }
-
-    /**
-     * @param mixed $userId
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * @param mixed $variables
-     * @return $this
-     */
-    public function setVariables($variables)
-    {
-        $this->variables = $variables;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getVariables()
-    {
-        return $this->variables;
-    }
-
-    /**
-     * @param mixed $active
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->active = $active;
+        $this->processInstanceBusinessKey = $processInstanceBusinessKey;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getTenantIdIn()
+    public function getProcessDefinitionId(): string
     {
-        return $this->tenantIdIn;
+        return $this->processDefinitionId;
     }
 
     /**
-     * @param array $tenants
-     * @return $this
+     * @param string $processDefinitionId
+     * @return TaskRequest
      */
-    public function setTenantIdIn(array $tenants)
+    public function setProcessDefinitionId(string $processDefinitionId): TaskRequest
     {
-        $this->tenantIdIn = join(',', $tenants);
+        $this->processDefinitionId = $processDefinitionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessDefinitionKey(): string
+    {
+        return $this->processDefinitionKey;
+    }
+
+    /**
+     * @param string $processDefinitionKey
+     * @return TaskRequest
+     */
+    public function setProcessDefinitionKey(string $processDefinitionKey): TaskRequest
+    {
+        $this->processDefinitionKey = $processDefinitionKey;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProcessDefinitionKeyIn(): array
+    {
+        return explode(',', $this->processDefinitionKeyIn);
+    }
+
+    /**
+     * @param array $processDefinitionKeys
+     * @return TaskRequest
+     */
+    public function setProcessDefinitionKeyIn(array $processDefinitionKeys): TaskRequest
+    {
+        $this->processDefinitionKeyIn = implode(',', $processDefinitionKeys);
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessDefinitionName(): string
+    {
+        return $this->processDefinitionName;
+    }
+
+    /**
+     * @param string $processDefinitionName
+     * @return TaskRequest
+     */
+    public function setProcessDefinitionName(string $processDefinitionName): TaskRequest
+    {
+        $this->processDefinitionName = $processDefinitionName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return TaskRequest
+     */
+    public function setExecutionId(string $executionId): TaskRequest
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAssignee(): string
+    {
+        return $this->assignee;
+    }
+
+    /**
+     * @param string $assignee
+     * @return TaskRequest
+     */
+    public function setAssignee(string $assignee): TaskRequest
+    {
+        $this->assignee = $assignee;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwner(): string
+    {
+        return $this->owner;
+    }
+
+    /**
+     * @param string $owner
+     * @return TaskRequest
+     */
+    public function setOwner(string $owner): TaskRequest
+    {
+        $this->owner = $owner;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCandidateGroup(): string
+    {
+        return $this->candidateGroup;
+    }
+
+    /**
+     * @param string $candidateGroup
+     * @return TaskRequest
+     */
+    public function setCandidateGroup(string $candidateGroup): TaskRequest
+    {
+        $this->candidateGroup = $candidateGroup;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCandidateUser(): string
+    {
+        return $this->candidateUser;
+    }
+
+    /**
+     * @param string $candidateUser
+     * @return TaskRequest
+     */
+    public function setCandidateUser(string $candidateUser): TaskRequest
+    {
+        $this->candidateUser = $candidateUser;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInvolvedUser(): string
+    {
+        return $this->involvedUser;
+    }
+
+    /**
+     * @param string $involvedUser
+     * @return TaskRequest
+     */
+    public function setInvolvedUser(string $involvedUser): TaskRequest
+    {
+        $this->involvedUser = $involvedUser;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAssigned(): bool
+    {
+        return $this->assigned;
+    }
+
+    /**
+     * @param bool $assigned
+     * @return TaskRequest
+     */
+    public function setAssigned(bool $assigned): TaskRequest
+    {
+        $this->assigned = $assigned;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isUnassigned(): bool
+    {
+        return $this->unassigned;
+    }
+
+    /**
+     * @param bool $unassigned
+     * @return TaskRequest
+     */
+    public function setUnassigned(bool $unassigned): TaskRequest
+    {
+        $this->unassigned = $unassigned;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaskDefinitionKey(): string
+    {
+        return $this->taskDefinitionKey;
+    }
+
+    /**
+     * @param string $taskDefinitionKey
+     * @return TaskRequest
+     */
+    public function setTaskDefinitionKey(string $taskDefinitionKey): TaskRequest
+    {
+        $this->taskDefinitionKey = $taskDefinitionKey;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaskDefinitionKeyLike(): string
+    {
+        return $this->taskDefinitionKeyLike;
+    }
+
+    /**
+     * @param string $taskDefinitionKeyLike
+     * @return TaskRequest
+     */
+    public function setTaskDefinitionKeyLike(string $taskDefinitionKeyLike): TaskRequest
+    {
+        $this->taskDefinitionKeyLike = $taskDefinitionKeyLike;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return TaskRequest
+     */
+    public function setName(string $name): TaskRequest
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameLike(): string
+    {
+        return $this->nameLike;
+    }
+
+    /**
+     * @param string $nameLike
+     * @return TaskRequest
+     */
+    public function setNameLike(string $nameLike): TaskRequest
+    {
+        $this->nameLike = $nameLike;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     * @return TaskRequest
+     */
+    public function setDescription(string $description): TaskRequest
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionLike(): string
+    {
+        return $this->descriptionLike;
+    }
+
+    /**
+     * @param string $descriptionLike
+     * @return TaskRequest
+     */
+    public function setDescriptionLike(string $descriptionLike): TaskRequest
+    {
+        $this->descriptionLike = $descriptionLike;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPriority(): int
+    {
+        return $this->priority;
+    }
+
+    /**
+     * @param int $priority
+     * @return TaskRequest
+     */
+    public function setPriority(int $priority): TaskRequest
+    {
+        $this->priority = $priority;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxPriority(): int
+    {
+        return $this->maxPriority;
+    }
+
+    /**
+     * @param int $maxPriority
+     * @return TaskRequest
+     */
+    public function setMaxPriority(int $maxPriority): TaskRequest
+    {
+        $this->maxPriority = $maxPriority;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinPriority(): int
+    {
+        return $this->minPriority;
+    }
+
+    /**
+     * @param int $minPriority
+     * @return TaskRequest
+     */
+    public function setMinPriority(int $minPriority): TaskRequest
+    {
+        $this->minPriority = $minPriority;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDueDate(): string
+    {
+        return $this->dueDate;
+    }
+
+    /**
+     * @param string $dueDate
+     * @return TaskRequest
+     */
+    public function setDueDate(string $dueDate): TaskRequest
+    {
+        $this->dueDate = $dueDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDueAfter(): string
+    {
+        return $this->dueAfter;
+    }
+
+    /**
+     * @param string $dueAfter
+     * @return TaskRequest
+     */
+    public function setDueAfter(string $dueAfter): TaskRequest
+    {
+        $this->dueAfter = $dueAfter;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDueBefore(): string
+    {
+        return $this->dueBefore;
+    }
+
+    /**
+     * @param string $dueBefore
+     * @return TaskRequest
+     */
+    public function setDueBefore(string $dueBefore): TaskRequest
+    {
+        $this->dueBefore = $dueBefore;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedOn(): string
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * @param string $createdOn
+     * @return TaskRequest
+     */
+    public function setCreatedOn(string $createdOn): TaskRequest
+    {
+        $this->createdOn = $createdOn;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedAfter(): string
+    {
+        return $this->createdAfter;
+    }
+
+    /**
+     * @param string $createdAfter
+     * @return TaskRequest
+     */
+    public function setCreatedAfter(string $createdAfter): TaskRequest
+    {
+        $this->createdAfter = $createdAfter;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreatedBefore(): string
+    {
+        return $this->createdBefore;
+    }
+
+    /**
+     * @param string $createdBefore
+     * @return TaskRequest
+     */
+    public function setCreatedBefore(string $createdBefore): TaskRequest
+    {
+        $this->createdBefore = $createdBefore;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDelegationState(): string
+    {
+        return $this->delegationState;
+    }
+
+    /**
+     * @param string $delegationState
+     * @return TaskRequest
+     */
+    public function setDelegationState(string $delegationState): TaskRequest
+    {
+        $this->delegationState = $delegationState;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCandidateGroups(): array
+    {
+        return explode(',', $this->candidateGroups);
+    }
+
+    /**
+     * @param array $candidateGroups
+     * @return TaskRequest
+     */
+    public function setCandidateGroups(array $candidateGroups): TaskRequest
+    {
+        $this->candidateGroups = implode(',', $candidateGroups);
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTaskVariables(): array
+    {
+        return $this->taskVariables;
+    }
+
+    /**
+     * @param array $taskVariables
+     * @return TaskRequest
+     */
+    public function setTaskVariables(array $taskVariables): TaskRequest
+    {
+        $this->taskVariables = $taskVariables;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProcessVariables(): array
+    {
+        return $this->processVariables;
+    }
+
+    /**
+     * @param array $processVariables
+     * @return TaskRequest
+     */
+    public function setProcessVariables(array $processVariables): TaskRequest
+    {
+        $this->processVariables = $processVariables;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return TaskRequest
+     */
+    public function setSortBy(string $sortBy): TaskRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return TaskRequest
+     */
+    public function setSortOrder(string $sortOrder): TaskRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return TaskRequest
+     */
+    public function setFirstResult(int $firstResult): TaskRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return TaskRequest
+     */
+    public function setMaxResults(int $maxResults): TaskRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive(): bool
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param bool $active
+     * @return TaskRequest
+     */
+    public function setActive(bool $active): TaskRequest
+    {
+        $this->active = $active;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTenantIdIn(): array
+    {
+        return explode(',', $this->tenantIdIn);
+    }
+
+    /**
+     * @param array $tenantIds
+     * @return TaskRequest
+     */
+    public function setTenantIdIn(array $tenantIds): TaskRequest
+    {
+        $this->tenantIdIn = implode(',', $tenantIds);
         return $this;
     }
 }

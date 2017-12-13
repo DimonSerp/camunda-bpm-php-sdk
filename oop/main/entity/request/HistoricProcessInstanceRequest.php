@@ -9,315 +9,383 @@
 
 namespace org\provectus\php\sdk\entity\request;
 
-
 class HistoricProcessInstanceRequest extends Request
 {
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $processInstanceBusinessKey;
+
+    /** @var string */
     protected $superProcessInstanceId;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processDefinitionKey;
+
+    /** @var string */
     protected $processDefinitionKeyNotIn;
+
+    /** @var bool */
     protected $finished;
+
+    /** @var bool */
     protected $unfinished;
+
+    /** @var string */
     protected $startedBy;
+
+    /** @var string */
     protected $startedBefore;
+
+    /** @var string */
     protected $startedAfter;
+
+    /** @var string */
     protected $finishedBefore;
+
+    /** @var string */
     protected $finishedAfter;
+
+    /** @var array */
     protected $variables;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $finished
+     * @return string
      */
-    public function setFinished($finished)
-    {
-        $this->finished = $finished;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFinished()
-    {
-        return $this->finished;
-    }
-
-    /**
-     * @param mixed $finishedAfter
-     */
-    public function setFinishedAfter($finishedAfter)
-    {
-        $this->finishedAfter = $finishedAfter;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFinishedAfter()
-    {
-        return $this->finishedAfter;
-    }
-
-    /**
-     * @param mixed $finishedBefore
-     */
-    public function setFinishedBefore($finishedBefore)
-    {
-        $this->finishedBefore = $finishedBefore;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFinishedBefore()
-    {
-        return $this->finishedBefore;
-    }
-
-    /**
-     * @param mixed $firstResult
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $maxResults
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $processDefinitionId
-     */
-    public function setProcessDefinitionId($processDefinitionId)
-    {
-        $this->processDefinitionId = $processDefinitionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionId()
-    {
-        return $this->processDefinitionId;
-    }
-
-    /**
-     * @param mixed $processDefinitionKey
-     */
-    public function setProcessDefinitionKey($processDefinitionKey)
-    {
-        $this->processDefinitionKey = $processDefinitionKey;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionKey()
-    {
-        return $this->processDefinitionKey;
-    }
-
-    /**
-     * @param mixed $processDefinitionKeyNotIn
-     */
-    public function setProcessDefinitionKeyNotIn($processDefinitionKeyNotIn)
-    {
-        $this->processDefinitionKeyNotIn = $processDefinitionKeyNotIn;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessDefinitionKeyNotIn()
-    {
-        return $this->processDefinitionKeyNotIn;
-    }
-
-    /**
-     * @param mixed $processInstanceBusinessKey
-     */
-    public function setProcessInstanceBusinessKey($processInstanceBusinessKey)
-    {
-        $this->processInstanceBusinessKey = $processInstanceBusinessKey;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessInstanceBusinessKey()
-    {
-        return $this->processInstanceBusinessKey;
-    }
-
-    /**
-     * @param mixed $processInstanceId
-     */
-    public function setProcessInstanceId($processInstanceId)
-    {
-        $this->processInstanceId = $processInstanceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessInstanceId()
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $sortBy
+     * @param string $processInstanceId
+     * @return HistoricProcessInstanceRequest
      */
-    public function setSortBy($sortBy)
+    public function setProcessInstanceId(string $processInstanceId): HistoricProcessInstanceRequest
     {
-        $this->sortBy = $sortBy;
+        $this->processInstanceId = $processInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortBy()
+    public function getProcessInstanceBusinessKey(): string
     {
-        return $this->sortBy;
+        return $this->processInstanceBusinessKey;
     }
 
     /**
-     * @param mixed $sortOrder
+     * @param string $processInstanceBusinessKey
+     * @return HistoricProcessInstanceRequest
      */
-    public function setSortOrder($sortOrder)
+    public function setProcessInstanceBusinessKey(string $processInstanceBusinessKey): HistoricProcessInstanceRequest
     {
-        $this->sortOrder = $sortOrder;
+        $this->processInstanceBusinessKey = $processInstanceBusinessKey;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $startedAfter
-     */
-    public function setStartedAfter($startedAfter)
-    {
-        $this->startedAfter = $startedAfter;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStartedAfter()
-    {
-        return $this->startedAfter;
-    }
-
-    /**
-     * @param mixed $startedBefore
-     */
-    public function setStartedBefore($startedBefore)
-    {
-        $this->startedBefore = $startedBefore;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStartedBefore()
-    {
-        return $this->startedBefore;
-    }
-
-    /**
-     * @param mixed $startedBy
-     */
-    public function setStartedBy($startedBy)
-    {
-        $this->startedBy = $startedBy;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStartedBy()
-    {
-        return $this->startedBy;
-    }
-
-    /**
-     * @param mixed $superProcessInstanceId
-     */
-    public function setSuperProcessInstanceId($superProcessInstanceId)
-    {
-        $this->superProcessInstanceId = $superProcessInstanceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSuperProcessInstanceId()
+    public function getSuperProcessInstanceId(): string
     {
         return $this->superProcessInstanceId;
     }
 
     /**
-     * @param mixed $unfinished
+     * @param string $superProcessInstanceId
+     * @return HistoricProcessInstanceRequest
      */
-    public function setUnfinished($unfinished)
+    public function setSuperProcessInstanceId(string $superProcessInstanceId): HistoricProcessInstanceRequest
     {
-        $this->unfinished = $unfinished;
+        $this->superProcessInstanceId = $superProcessInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getUnfinished()
+    public function getProcessDefinitionId(): string
+    {
+        return $this->processDefinitionId;
+    }
+
+    /**
+     * @param string $processDefinitionId
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setProcessDefinitionId(string $processDefinitionId): HistoricProcessInstanceRequest
+    {
+        $this->processDefinitionId = $processDefinitionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessDefinitionKey(): string
+    {
+        return $this->processDefinitionKey;
+    }
+
+    /**
+     * @param string $processDefinitionKey
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setProcessDefinitionKey(string $processDefinitionKey): HistoricProcessInstanceRequest
+    {
+        $this->processDefinitionKey = $processDefinitionKey;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProcessDefinitionKeyNotIn(): array
+    {
+        return explode(',', $this->processDefinitionKeyNotIn);
+    }
+
+    /**
+     * @param array $processDefinitionIds
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setProcessDefinitionKeyNotIn(array $processDefinitionIds): HistoricProcessInstanceRequest
+    {
+        $this->processDefinitionKeyNotIn = implode(',', $processDefinitionIds);
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFinished(): bool
+    {
+        return $this->finished;
+    }
+
+    /**
+     * @param bool $finished
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setFinished(bool $finished): HistoricProcessInstanceRequest
+    {
+        $this->finished = $finished;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isUnfinished(): bool
     {
         return $this->unfinished;
     }
 
     /**
-     * @param mixed $variables
+     * @param bool $unfinished
+     * @return HistoricProcessInstanceRequest
      */
-    public function setVariables($variables)
+    public function setUnfinished(bool $unfinished): HistoricProcessInstanceRequest
     {
-        $this->variables = $variables;
+        $this->unfinished = $unfinished;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariables()
+    public function getStartedBy(): string
+    {
+        return $this->startedBy;
+    }
+
+    /**
+     * @param string $startedBy
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setStartedBy(string $startedBy): HistoricProcessInstanceRequest
+    {
+        $this->startedBy = $startedBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartedBefore(): string
+    {
+        return $this->startedBefore;
+    }
+
+    /**
+     * @param string $startedBefore
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setStartedBefore(string $startedBefore): HistoricProcessInstanceRequest
+    {
+        $this->startedBefore = $startedBefore;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartedAfter(): string
+    {
+        return $this->startedAfter;
+    }
+
+    /**
+     * @param string $startedAfter
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setStartedAfter(string $startedAfter): HistoricProcessInstanceRequest
+    {
+        $this->startedAfter = $startedAfter;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFinishedBefore(): string
+    {
+        return $this->finishedBefore;
+    }
+
+    /**
+     * @param string $finishedBefore
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setFinishedBefore(string $finishedBefore): HistoricProcessInstanceRequest
+    {
+        $this->finishedBefore = $finishedBefore;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFinishedAfter(): string
+    {
+        return $this->finishedAfter;
+    }
+
+    /**
+     * @param string $finishedAfter
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setFinishedAfter(string $finishedAfter): HistoricProcessInstanceRequest
+    {
+        $this->finishedAfter = $finishedAfter;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getVariables(): array
     {
         return $this->variables;
     }
 
+    /**
+     * @param array $variables
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setVariables(array $variables): HistoricProcessInstanceRequest
+    {
+        $this->variables = $variables;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setSortBy(string $sortBy): HistoricProcessInstanceRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setSortOrder(string $sortOrder): HistoricProcessInstanceRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setFirstResult(int $firstResult): HistoricProcessInstanceRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return HistoricProcessInstanceRequest
+     */
+    public function setMaxResults(int $maxResults): HistoricProcessInstanceRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

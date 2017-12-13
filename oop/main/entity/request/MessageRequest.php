@@ -11,82 +11,88 @@ namespace org\provectus\php\sdk\entity\request;
 
 class MessageRequest extends Request
 {
+    /** @var string */
     protected $messageName;
+
+    /** @var string */
     protected $businessKey;
+
+    // TODO: change to array
+    /** @var string */
     protected $correlationKeys;
+
+    /** @var array */
     protected $processVariables;
 
     /**
-     * @param mixed $businessKey
-     * @return $this
+     * @return string
      */
-    public function setBusinessKey($businessKey)
+    public function getMessageName(): string
     {
-        $this->businessKey = $businessKey;
-        return $this;
+        return $this->messageName;
     }
 
     /**
-     * @return mixed
+     * @param string $messageName
+     * @return MessageRequest
      */
-    public function getBusinessKey()
-    {
-        return $this->businessKey;
-    }
-
-    /**
-     * @param mixed $correlationKeys
-     * @return $this
-     */
-    public function setCorrelationKeys($correlationKeys)
-    {
-        $this->correlationKeys = $correlationKeys;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCorrelationKeys()
-    {
-        return $this->correlationKeys;
-    }
-
-    /**
-     * @param mixed $messageName
-     * @return $this
-     */
-    public function setMessageName($messageName)
+    public function setMessageName(string $messageName): MessageRequest
     {
         $this->messageName = $messageName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMessageName()
+    public function getBusinessKey(): string
     {
-        return $this->messageName;
+        return $this->businessKey;
     }
 
     /**
-     * @param mixed $processVariables
-     * @return $this
+     * @param string $businessKey
+     * @return MessageRequest
      */
-    public function setProcessVariables($processVariables)
+    public function setBusinessKey(string $businessKey): MessageRequest
     {
-        $this->processVariables = $processVariables;
+        $this->businessKey = $businessKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessVariables()
+    public function getCorrelationKeys(): string
+    {
+        return $this->correlationKeys;
+    }
+
+    /**
+     * @param string $correlationKeys
+     * @return MessageRequest
+     */
+    public function setCorrelationKeys(string $correlationKeys): MessageRequest
+    {
+        $this->correlationKeys = $correlationKeys;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProcessVariables(): array
     {
         return $this->processVariables;
     }
 
-
+    /**
+     * @param array $processVariables
+     * @return MessageRequest
+     */
+    public function setProcessVariables(array $processVariables): MessageRequest
+    {
+        $this->processVariables = $processVariables;
+        return $this;
+    }
 }

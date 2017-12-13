@@ -9,11 +9,12 @@
 
 namespace org\provectus\php\sdk\entity\request;
 
-
 class Request
 {
-
-    public function iterate()
+    /**
+     * @return array
+     */
+    public function iterate(): array
     {
         $tmp = [];
         foreach ($this as $index => $value) {

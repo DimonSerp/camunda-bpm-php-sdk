@@ -11,290 +11,318 @@ namespace org\provectus\php\sdk\entity\request;
 
 class ExecutionRequest extends Request
 {
+    /** @var string */
     protected $businessKey;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processDefinitionKey;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $activityId;
+
+    /** @var string */
     protected $signalEventSubscriptionName;
+
+    /** @var string */
     protected $messageEventSubscriptionName;
+
+    /** @var bool */
     protected $active;
+
+    /** @var bool */
     protected $suspended;
+
+    /** @var array */
     protected $variables;
+
+    /** @var array */
     protected $processVariables;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $active
-     * @return $this
+     * @return string
      */
-    public function setActive($active)
+    public function getBusinessKey(): string
     {
-        $this->active = $active;
-        return $this;
+        return $this->businessKey;
     }
 
     /**
-     * @return mixed
+     * @param string $businessKey
+     * @return ExecutionRequest
      */
-    public function getActive()
-    {
-        return $this->active;
-    }
-
-    /**
-     * @param mixed $suspended
-     * @return $this
-     */
-    public function setSuspended($suspended)
-    {
-        $this->suspended = $suspended;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSuspended()
-    {
-        return $this->suspended;
-    }
-
-    /**
-     * @param mixed $activityId
-     * @return $this
-     */
-    public function setActivityId($activityId)
-    {
-        $this->activityId = $activityId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityId()
-    {
-        return $this->activityId;
-    }
-
-    /**
-     * @param mixed $businessKey
-     * @return $this
-     */
-    public function setBusinessKey($businessKey)
+    public function setBusinessKey(string $businessKey): ExecutionRequest
     {
         $this->businessKey = $businessKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getBusinessKey()
+    public function getProcessDefinitionId(): string
     {
-        return $this->businessKey;
+        return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $firstResult
-     * @return $this
+     * @param string $processDefinitionId
+     * @return ExecutionRequest
      */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $maxResults
-     * @return $this
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $messageEventSubscriptionName
-     * @return $this
-     */
-    public function setMessageEventSubscriptionName($messageEventSubscriptionName)
-    {
-        $this->messageEventSubscriptionName = $messageEventSubscriptionName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMessageEventSubscriptionName()
-    {
-        return $this->messageEventSubscriptionName;
-    }
-
-    /**
-     * @param mixed $processDefinitionId
-     * @return $this
-     */
-    public function setProcessDefinitionId($processDefinitionId)
+    public function setProcessDefinitionId(string $processDefinitionId): ExecutionRequest
     {
         $this->processDefinitionId = $processDefinitionId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionId()
+    public function getProcessDefinitionKey(): string
     {
-        return $this->processDefinitionId;
+        return $this->processDefinitionKey;
     }
 
     /**
-     * @param mixed $processDefinitionKey
-     * @return $this
+     * @param string $processDefinitionKey
+     * @return ExecutionRequest
      */
-    public function setProcessDefinitionKey($processDefinitionKey)
+    public function setProcessDefinitionKey(string $processDefinitionKey): ExecutionRequest
     {
         $this->processDefinitionKey = $processDefinitionKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionKey()
+    public function getProcessInstanceId(): string
     {
-        return $this->processDefinitionKey;
+        return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $processInstanceId
-     * @return $this
+     * @param string $processInstanceId
+     * @return ExecutionRequest
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessInstanceId(string $processInstanceId): ExecutionRequest
     {
         $this->processInstanceId = $processInstanceId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getActivityId(): string
     {
-        return $this->processInstanceId;
+        return $this->activityId;
     }
 
     /**
-     * @param mixed $processVariables
-     * @return $this
+     * @param string $activityId
+     * @return ExecutionRequest
      */
-    public function setProcessVariables($processVariables)
+    public function setActivityId(string $activityId): ExecutionRequest
     {
-        $this->processVariables = $processVariables;
+        $this->activityId = $activityId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessVariables()
+    public function getSignalEventSubscriptionName(): string
     {
-        return $this->processVariables;
+        return $this->signalEventSubscriptionName;
     }
 
     /**
-     * @param mixed $signalEventSubscriptionName
-     * @return $this
+     * @param string $signalEventSubscriptionName
+     * @return ExecutionRequest
      */
-    public function setSignalEventSubscriptionName($signalEventSubscriptionName)
+    public function setSignalEventSubscriptionName(string $signalEventSubscriptionName): ExecutionRequest
     {
         $this->signalEventSubscriptionName = $signalEventSubscriptionName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSignalEventSubscriptionName()
+    public function getMessageEventSubscriptionName(): string
     {
-        return $this->signalEventSubscriptionName;
+        return $this->messageEventSubscriptionName;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $messageEventSubscriptionName
+     * @return ExecutionRequest
      */
-    public function setSortBy($sortBy)
+    public function setMessageEventSubscriptionName(string $messageEventSubscriptionName): ExecutionRequest
     {
-        $this->sortBy = $sortBy;
+        $this->messageEventSubscriptionName = $messageEventSubscriptionName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getSortBy()
+    public function isActive(): bool
     {
-        return $this->sortBy;
+        return $this->active;
     }
 
     /**
-     * @param mixed $sortOrder
-     * @return $this
+     * @param bool $active
+     * @return ExecutionRequest
      */
-    public function setSortOrder($sortOrder)
+    public function setActive(bool $active): ExecutionRequest
     {
-        $this->sortOrder = $sortOrder;
+        $this->active = $active;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getSortOrder()
+    public function isSuspended(): bool
     {
-        return $this->sortOrder;
+        return $this->suspended;
     }
 
     /**
-     * @param mixed $variables
-     * @return $this
+     * @param bool $suspended
+     * @return ExecutionRequest
      */
-    public function setVariables($variables)
+    public function setSuspended(bool $suspended): ExecutionRequest
+    {
+        $this->suspended = $suspended;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getVariables(): array
+    {
+        return $this->variables;
+    }
+
+    /**
+     * @param array $variables
+     * @return ExecutionRequest
+     */
+    public function setVariables(array $variables): ExecutionRequest
     {
         $this->variables = $variables;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getVariables()
+    public function getProcessVariables(): array
     {
-        return $this->variables;
+        return $this->processVariables;
     }
 
+    /**
+     * @param array $processVariables
+     * @return ExecutionRequest
+     */
+    public function setProcessVariables(array $processVariables): ExecutionRequest
+    {
+        $this->processVariables = $processVariables;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return ExecutionRequest
+     */
+    public function setSortBy(string $sortBy): ExecutionRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return ExecutionRequest
+     */
+    public function setSortOrder(string $sortOrder): ExecutionRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return ExecutionRequest
+     */
+    public function setFirstResult(int $firstResult): ExecutionRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return ExecutionRequest
+     */
+    public function setMaxResults(int $maxResults): ExecutionRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

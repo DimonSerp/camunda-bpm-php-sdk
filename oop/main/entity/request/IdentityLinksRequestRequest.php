@@ -12,62 +12,66 @@ namespace org\provectus\php\sdk\entity\request;
 
 class IdentityLinksRequest extends Request
 {
+    /** @var string */
     protected $userId;
+
+    /** @var string */
     protected $groupId;
+
+    /** @var string */
     protected $type;
 
     /**
-     * @param mixed $userId
-     * @return $this
+     * @return string
      */
-    public function setUserId($userId)
+    public function getUserId(): string
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @param string $userId
+     * @return IdentityLinksRequest
+     */
+    public function setUserId(string $userId): IdentityLinksRequest
     {
         $this->userId = $userId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getUserId()
+    public function getGroupId(): string
     {
-        return $this->userId;
+        return $this->groupId;
     }
 
     /**
-     * @param mixed $groupId
-     * @return $this
+     * @param string $groupId
+     * @return IdentityLinksRequest
      */
-    public function setGroupId($groupId)
+    public function setGroupId(string $groupId): IdentityLinksRequest
     {
         $this->groupId = $groupId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getGroupId()
-    {
-        return $this->groupId;
-    }
-
-    /**
-     * @param mixed $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
+    /**
+     * @param string $type
+     * @return IdentityLinksRequest
+     */
+    public function setType(string $type): IdentityLinksRequest
+    {
+        $this->type = $type;
+        return $this;
+    }
 }

@@ -12,142 +12,171 @@ namespace org\provectus\php\sdk\entity\request;
 
 class HistoricVariableInstanceRequest extends Request
 {
+    /** @var string */
     protected $variableName;
+
+    /** @var string */
     protected $variableNameLike;
+
+    /** @var string */
     protected $variableValue;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $firstResult
+     * @return string
      */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $maxResults
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $processInstanceId
-     */
-    public function setProcessInstanceId($processInstanceId)
-    {
-        $this->processInstanceId = $processInstanceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessInstanceId()
-    {
-        return $this->processInstanceId;
-    }
-
-    /**
-     * @param mixed $sortBy
-     */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $variableName
-     */
-    public function setVariableName($variableName)
-    {
-        $this->variableName = $variableName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getVariableName()
+    public function getVariableName(): string
     {
         return $this->variableName;
     }
 
     /**
-     * @param mixed $variableNameLike
+     * @param string $variableName
+     * @return HistoricVariableInstanceRequest
      */
-    public function setVariableNameLike($variableNameLike)
+    public function setVariableName(string $variableName): HistoricVariableInstanceRequest
     {
-        $this->variableNameLike = $variableNameLike;
+        $this->variableName = $variableName;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariableNameLike()
+    public function getVariableNameLike(): string
     {
         return $this->variableNameLike;
     }
 
     /**
-     * @param mixed $variableValue
+     * @param string $variableNameLike
+     * @return HistoricVariableInstanceRequest
      */
-    public function setVariableValue($variableValue)
+    public function setVariableNameLike(string $variableNameLike): HistoricVariableInstanceRequest
     {
-        $this->variableValue = $variableValue;
+        $this->variableNameLike = $variableNameLike;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariableValue()
+    public function getVariableValue(): string
     {
         return $this->variableValue;
     }
 
+    /**
+     * @param string $variableValue
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setVariableValue(string $variableValue): HistoricVariableInstanceRequest
+    {
+        $this->variableValue = $variableValue;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
+    {
+        return $this->processInstanceId;
+    }
+
+    /**
+     * @param string $processInstanceId
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setProcessInstanceId(string $processInstanceId): HistoricVariableInstanceRequest
+    {
+        $this->processInstanceId = $processInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setSortBy(string $sortBy): HistoricVariableInstanceRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setSortOrder(string $sortOrder): HistoricVariableInstanceRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setFirstResult(int $firstResult): HistoricVariableInstanceRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return HistoricVariableInstanceRequest
+     */
+    public function setMaxResults(int $maxResults): HistoricVariableInstanceRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

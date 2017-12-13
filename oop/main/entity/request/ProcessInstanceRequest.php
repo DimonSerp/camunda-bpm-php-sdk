@@ -11,253 +11,276 @@ namespace org\provectus\php\sdk\entity\request;
 
 class ProcessInstanceRequest extends Request
 {
+    /** @var string */
     protected $businessKey;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processDefinitionKey;
+
+    /** @var string */
     protected $superProcessInstance;
+
+    /** @var string */
     protected $subProcessInstance;
+
+    /** @var bool */
     protected $active;
+
+    /** @var bool */
     protected $suspended;
+
+    /** @var array */
     protected $variables;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var string */
     protected $deleteReason;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $active
-     * @return $this
+     * @return string
      */
-    public function setActive($active)
+    public function getBusinessKey(): string
     {
-        $this->active = $active;
-        return $this;
+        return $this->businessKey;
     }
 
     /**
-     * @return mixed
+     * @param string $businessKey
+     * @return ProcessInstanceRequest
      */
-    public function getActive()
-    {
-        return $this->active;
-    }
-
-    /**
-     * @param mixed $businessKey
-     * @return $this
-     */
-    public function setBusinessKey($businessKey)
+    public function setBusinessKey(string $businessKey): ProcessInstanceRequest
     {
         $this->businessKey = $businessKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getBusinessKey()
+    public function getProcessDefinitionId(): string
     {
-        return $this->businessKey;
+        return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $deleteReason
-     * @return $this
+     * @param string $processDefinitionId
+     * @return ProcessInstanceRequest
      */
-    public function setDeleteReason($deleteReason)
-    {
-        $this->deleteReason = $deleteReason;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDeleteReason()
-    {
-        return $this->deleteReason;
-    }
-
-    /**
-     * @param mixed $firstResult
-     * @return $this
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $maxResults
-     * @return $this
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $processDefinitionId
-     * @return $this
-     */
-    public function setProcessDefinitionId($processDefinitionId)
+    public function setProcessDefinitionId(string $processDefinitionId): ProcessInstanceRequest
     {
         $this->processDefinitionId = $processDefinitionId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionId()
+    public function getProcessDefinitionKey(): string
     {
-        return $this->processDefinitionId;
+        return $this->processDefinitionKey;
     }
 
     /**
-     * @param mixed $processDefinitionKey
-     * @return $this
+     * @param string $processDefinitionKey
+     * @return ProcessInstanceRequest
      */
-    public function setProcessDefinitionKey($processDefinitionKey)
+    public function setProcessDefinitionKey(string $processDefinitionKey): ProcessInstanceRequest
     {
         $this->processDefinitionKey = $processDefinitionKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionKey()
+    public function getSuperProcessInstance(): string
     {
-        return $this->processDefinitionKey;
+        return $this->superProcessInstance;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $superProcessInstance
+     * @return ProcessInstanceRequest
      */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     * @return $this
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $subProcessInstance
-     * @return $this
-     */
-    public function setSubProcessInstance($subProcessInstance)
-    {
-        $this->subProcessInstance = $subProcessInstance;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSubProcessInstance()
-    {
-        return $this->subProcessInstance;
-    }
-
-    /**
-     * @param mixed $superProcessInstance
-     * @return $this
-     */
-    public function setSuperProcessInstance($superProcessInstance)
+    public function setSuperProcessInstance(string $superProcessInstance): ProcessInstanceRequest
     {
         $this->superProcessInstance = $superProcessInstance;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSuperProcessInstance()
+    public function getSubProcessInstance(): string
     {
-        return $this->superProcessInstance;
+        return $this->subProcessInstance;
     }
 
     /**
-     * @param mixed $suspended
-     * @return $this
+     * @param string $subProcessInstance
+     * @return ProcessInstanceRequest
      */
-    public function setSuspended($suspended)
+    public function setSubProcessInstance(string $subProcessInstance): ProcessInstanceRequest
+    {
+        $this->subProcessInstance = $subProcessInstance;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive(): bool
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param bool $active
+     * @return ProcessInstanceRequest
+     */
+    public function setActive(bool $active): ProcessInstanceRequest
+    {
+        $this->active = $active;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSuspended(): bool
+    {
+        return $this->suspended;
+    }
+
+    /**
+     * @param bool $suspended
+     * @return ProcessInstanceRequest
+     */
+    public function setSuspended(bool $suspended): ProcessInstanceRequest
     {
         $this->suspended = $suspended;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getSuspended()
+    public function getVariables(): array
     {
-        return $this->suspended;
+        return $this->variables;
     }
 
     /**
-     * @param mixed $variables
-     * @return $this
+     * @param array $variables
+     * @return ProcessInstanceRequest
      */
-    public function setVariables($variables)
+    public function setVariables(array $variables): ProcessInstanceRequest
     {
         $this->variables = $variables;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariables()
+    public function getSortBy(): string
     {
-        return $this->variables;
+        return $this->sortBy;
     }
 
+    /**
+     * @param string $sortBy
+     * @return ProcessInstanceRequest
+     */
+    public function setSortBy(string $sortBy): ProcessInstanceRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return ProcessInstanceRequest
+     */
+    public function setSortOrder(string $sortOrder): ProcessInstanceRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeleteReason(): string
+    {
+        return $this->deleteReason;
+    }
+
+    /**
+     * @param string $deleteReason
+     * @return ProcessInstanceRequest
+     */
+    public function setDeleteReason(string $deleteReason): ProcessInstanceRequest
+    {
+        $this->deleteReason = $deleteReason;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return ProcessInstanceRequest
+     */
+    public function setFirstResult(int $firstResult): ProcessInstanceRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return ProcessInstanceRequest
+     */
+    public function setMaxResults(int $maxResults): ProcessInstanceRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

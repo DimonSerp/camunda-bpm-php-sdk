@@ -9,85 +9,89 @@
 
 namespace org\provectus\php\sdk\entity\request;
 
-
 class ProfileRequest extends Request
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $firstName;
+
+    /** @var string */
     protected $lastName;
+
+    /** @var string */
     protected $email;
 
     /**
-     * @param mixed $email
-     * @return $this
+     * @return string
      */
-    public function setEmail($email)
+    public function getId(): string
     {
-        $this->email = $email;
-        return $this;
+        return $this->id;
     }
 
     /**
-     * @return mixed
+     * @param string $id
+     * @return ProfileRequest
      */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $firstName
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param mixed $id
-     * @return $this
-     */
-    public function setId($id)
+    public function setId(string $id): ProfileRequest
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getId()
+    public function getFirstName(): string
     {
-        return $this->id;
+        return $this->firstName;
     }
 
     /**
-     * @param mixed $lastName
-     * @return $this
+     * @param string $firstName
+     * @return ProfileRequest
      */
-    public function setLastName($lastName)
+    public function setFirstName(string $firstName): ProfileRequest
+    {
+        $this->firstName = $firstName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     * @return ProfileRequest
+     */
+    public function setLastName(string $lastName): ProfileRequest
     {
         $this->lastName = $lastName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getLastName()
+    public function getEmail(): string
     {
-        return $this->lastName;
+        return $this->email;
     }
 
-
+    /**
+     * @param string $email
+     * @return ProfileRequest
+     */
+    public function setEmail(string $email): ProfileRequest
+    {
+        $this->email = $email;
+        return $this;
+    }
 }

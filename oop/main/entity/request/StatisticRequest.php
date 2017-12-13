@@ -11,63 +11,66 @@ namespace org\provectus\php\sdk\entity\request;
 
 class StatisticRequest extends Request
 {
+    /** @var string */
     protected $failedJobs;
+
+    /** @var string */
     protected $incidents;
+
+    /** @var string */
     protected $incidentsForType;
 
     /**
-     * @param mixed $failedJobs
-     * @return $this
+     * @return string
      */
-    public function setFailedJobs($failedJobs)
+    public function getFailedJobs(): string
+    {
+        return $this->failedJobs;
+    }
+
+    /**
+     * @param string $failedJobs
+     * @return StatisticRequest
+     */
+    public function setFailedJobs(string $failedJobs): StatisticRequest
     {
         $this->failedJobs = $failedJobs;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getFailedJobs()
+    public function getIncidents(): string
     {
-        return $this->failedJobs;
+        return $this->incidents;
     }
 
     /**
-     * @param mixed $incidents
-     * @return $this
+     * @param string $incidents
+     * @return StatisticRequest
      */
-    public function setIncidents($incidents)
+    public function setIncidents(string $incidents): StatisticRequest
     {
         $this->incidents = $incidents;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getIncidents()
-    {
-        return $this->incidents;
-    }
-
-    /**
-     * @param mixed $incidentsForType
-     * @return $this
-     */
-    public function setIncidentsForType($incidentsForType)
-    {
-        $this->incidentsForType = $incidentsForType;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIncidentsForType()
+    public function getIncidentsForType(): string
     {
         return $this->incidentsForType;
     }
 
-
+    /**
+     * @param string $incidentsForType
+     * @return StatisticRequest
+     */
+    public function setIncidentsForType(string $incidentsForType): StatisticRequest
+    {
+        $this->incidentsForType = $incidentsForType;
+        return $this;
+    }
 }

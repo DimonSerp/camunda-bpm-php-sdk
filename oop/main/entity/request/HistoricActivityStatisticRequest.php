@@ -4,99 +4,108 @@ namespace org\provectus\php\sdk\entity\request;
 
 class HistoricActivityStatisticRequest extends Request
 {
+    /** @var bool */
     protected $canceled;
+
+    /** @var bool */
     protected $finished;
+
+    /** @var bool */
     protected $completeScope;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
 
     /**
-     * @param mixed $canceled
-     * @return $this
+     * @return bool
      */
-    public function setCanceled($canceled)
+    public function isCanceled(): bool
+    {
+        return $this->canceled;
+    }
+
+    /**
+     * @param bool $canceled
+     * @return HistoricActivityStatisticRequest
+     */
+    public function setCanceled(bool $canceled): HistoricActivityStatisticRequest
     {
         $this->canceled = $canceled;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getCanceled()
+    public function isFinished(): bool
     {
-        return $this->canceled;
+        return $this->finished;
     }
 
     /**
-     * @param mixed $finished
-     * @return $this
+     * @param bool $finished
+     * @return HistoricActivityStatisticRequest
      */
-    public function setFinished($finished)
+    public function setFinished(bool $finished): HistoricActivityStatisticRequest
     {
         $this->finished = $finished;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getFinished()
+    public function isCompleteScope(): bool
     {
-        return $this->finished;
+        return $this->completeScope;
     }
 
     /**
-     * @param mixed $completeScope
-     * @return $this
+     * @param bool $completeScope
+     * @return HistoricActivityStatisticRequest
      */
-    public function setCompleteScope($completeScope)
+    public function setCompleteScope(bool $completeScope): HistoricActivityStatisticRequest
     {
         $this->completeScope = $completeScope;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getCompleteScope()
+    public function getSortBy(): string
     {
-        return $this->completeScope;
+        return $this->sortBy;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $sortBy
+     * @return HistoricActivityStatisticRequest
      */
-    public function setSortBy($sortBy)
+    public function setSortBy(string $sortBy): HistoricActivityStatisticRequest
     {
         $this->sortBy = $sortBy;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortBy()
+    public function getSortOrder(): string
     {
-        return $this->sortBy;
+        return $this->sortOrder;
     }
 
     /**
-     * @param mixed $sortOrder
-     * @return $this
+     * @param string $sortOrder
+     * @return HistoricActivityStatisticRequest
      */
-    public function setSortOrder($sortOrder)
+    public function setSortOrder(string $sortOrder): HistoricActivityStatisticRequest
     {
         $this->sortOrder = $sortOrder;
         return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
     }
 }

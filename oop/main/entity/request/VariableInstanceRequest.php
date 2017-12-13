@@ -12,215 +12,255 @@ namespace org\provectus\php\sdk\entity\request;
 
 class VariableInstanceRequest extends Request
 {
+    /** @var string */
     protected $variableName;
+
+    /** @var string */
     protected $variableNameLike;
+
+    /** @var string */
     protected $processInstanceIdIn;
+
+    /** @var string */
     protected $executionIdIn;
+
+    /** @var string */
     protected $taskIdIn;
+
+    /** @var string */
     protected $activityInstanceIdIn;
+
+    /** @var string */
     protected $variableValues;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
+    /** @var string */
+    protected $tenantIdIn;
+
     /**
-     * @param mixed $activityInstanceIdIn
-     * @return $this
+     * @return string
      */
-    public function setActivityInstanceIdIn($activityInstanceIdIn)
+    public function getVariableName(): string
     {
-        $this->activityInstanceIdIn = $activityInstanceIdIn;
-        return $this;
+        return $this->variableName;
     }
 
     /**
-     * @return mixed
+     * @param string $variableName
+     * @return VariableInstanceRequest
      */
-    public function getActivityInstanceIdIn()
-    {
-        return $this->activityInstanceIdIn;
-    }
-
-    /**
-     * @param mixed $executionIdIn
-     * @return $this
-     */
-    public function setExecutionIdIn($executionIdIn)
-    {
-        $this->executionIdIn = $executionIdIn;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionIdIn()
-    {
-        return $this->executionIdIn;
-    }
-
-    /**
-     * @param mixed $firstResult
-     * @return $this
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $maxResults
-     * @return $this
-     */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $processInstanceIdIn
-     * @return $this
-     */
-    public function setProcessInstanceIdIn($processInstanceIdIn)
-    {
-        $this->processInstanceIdIn = $processInstanceIdIn;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProcessInstanceIdIn()
-    {
-        return $this->processInstanceIdIn;
-    }
-
-    /**
-     * @param mixed $sortBy
-     * @return $this
-     */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     * @return $this
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $taskIdIn
-     * @return $this
-     */
-    public function setTaskIdIn($taskIdIn)
-    {
-        $this->taskIdIn = $taskIdIn;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTaskIdIn()
-    {
-        return $this->taskIdIn;
-    }
-
-    /**
-     * @param mixed $variableName
-     * @return $this
-     */
-    public function setVariableName($variableName)
+    public function setVariableName(string $variableName): VariableInstanceRequest
     {
         $this->variableName = $variableName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariableName()
+    public function getVariableNameLike(): string
     {
-        return $this->variableName;
+        return $this->variableNameLike;
     }
 
     /**
-     * @param mixed $variableNameLike
-     * @return $this
+     * @param string $variableNameLike
+     * @return VariableInstanceRequest
      */
-    public function setVariableNameLike($variableNameLike)
+    public function setVariableNameLike(string $variableNameLike): VariableInstanceRequest
     {
         $this->variableNameLike = $variableNameLike;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getVariableNameLike()
+    public function getProcessInstanceIdIn(): array
     {
-        return $this->variableNameLike;
+        return explode(',', $this->processInstanceIdIn);
     }
 
     /**
-     * @param mixed $variableValues
-     * @return $this
+     * @param array $processInstanceIds
+     * @return VariableInstanceRequest
      */
-    public function setVariableValues($variableValues)
+    public function setProcessInstanceIdIn(array $processInstanceIds): VariableInstanceRequest
     {
-        $this->variableValues = $variableValues;
+        $this->processInstanceIdIn = implode(',', $processInstanceIds);
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getVariableValues()
+    public function getExecutionIdIn(): array
     {
-        return $this->variableValues;
+        return explode(',', $this->executionIdIn);
     }
 
+    /**
+     * @param array $executionIds
+     * @return VariableInstanceRequest
+     */
+    public function setExecutionIdIn(array $executionIds): VariableInstanceRequest
+    {
+        $this->executionIdIn = implode(',', $executionIds);
+        return $this;
+    }
 
+    /**
+     * @return array
+     */
+    public function getTaskIdIn(): array
+    {
+        return explode(',', $this->taskIdIn);
+    }
+
+    /**
+     * @param array $taskIds
+     * @return VariableInstanceRequest
+     */
+    public function setTaskIdIn(array $taskIds): VariableInstanceRequest
+    {
+        $this->taskIdIn = implode(',', $taskIds);
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getActivityInstanceIdIn(): array
+    {
+        return explode(',', $this->activityInstanceIdIn);
+    }
+
+    /**
+     * @param array $activityInstanceIds
+     * @return VariableInstanceRequest
+     */
+    public function setActivityInstanceIdIn(array $activityInstanceIds): VariableInstanceRequest
+    {
+        $this->activityInstanceIdIn = implode(',', $activityInstanceIds);
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getVariableValues(): array
+    {
+        return explode(',', $this->variableValues);
+    }
+
+    /**
+     * @param array $variableValues
+     * @return VariableInstanceRequest
+     */
+    public function setVariableValues(array $variableValues): VariableInstanceRequest
+    {
+        $this->variableValues = implode(',', $variableValues);
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return VariableInstanceRequest
+     */
+    public function setSortBy(string $sortBy): VariableInstanceRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return VariableInstanceRequest
+     */
+    public function setSortOrder(string $sortOrder): VariableInstanceRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return VariableInstanceRequest
+     */
+    public function setFirstResult(int $firstResult): VariableInstanceRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return VariableInstanceRequest
+     */
+    public function setMaxResults(int $maxResults): VariableInstanceRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTenantIdIn(): array
+    {
+        return explode(',', $this->tenantIdIn);
+    }
+
+    /**
+     * @param array $tenantIds
+     * @return VariableInstanceRequest
+     */
+    public function setTenantIdIn(array $tenantIds): VariableInstanceRequest
+    {
+        $this->tenantIdIn = implode(',', $tenantIds);
+        return $this;
+    }
 }

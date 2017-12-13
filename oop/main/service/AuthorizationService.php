@@ -16,7 +16,6 @@ use org\provectus\php\sdk\entity\response\ResourceOption;
 
 class AuthorizationService extends RequestService
 {
-
     /**
      * Removes an authorization by id
      * @Link http://docs.camunda.org/latest/api-references/rest/#authorization-delete-authorization
@@ -24,7 +23,7 @@ class AuthorizationService extends RequestService
      * @param String $id authorization ID
      * @throws CamundaApiException
      */
-    public function deleteAuthorization(string $id)
+    public function deleteAuthorization(string $id): void
     {
         $this->setRequestUrl('/authorization/' . $id);
         $this->setRequestObject(null);

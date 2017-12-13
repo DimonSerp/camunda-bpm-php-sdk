@@ -11,22 +11,23 @@ namespace org\provectus\php\sdk\entity\request;
 
 class CredentialsRequest extends Request
 {
+    /** @var string */
     protected $password;
 
     /**
      * @param mixed $password
      * @return $this
      */
-    public function setPassword($password)
+    public function setPassword($password): CredentialsRequest
     {
         $this->password = $password;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
-    public function getPassword()
+    public function getPassword(): ?string
     {
         return $this->password;
     }

@@ -11,175 +11,192 @@ namespace org\provectus\php\sdk\entity\request;
 
 class MessageSubscriptionRequest extends Request
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $eventType;
+
+    /** @var string */
     protected $eventName;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $activityId;
+
+    /** @var string */
     protected $createdDate;
+
+    /** @var string */
     protected $messageName;
+
+    /** @var array */
     protected $variables;
 
     /**
-     * @param mixed $activityId
+     * @return string
      */
-    public function setActivityId($activityId)
+    public function getId(): string
     {
-        $this->activityId = $activityId;
+        return $this->id;
     }
 
     /**
-     * @return mixed
+     * @param string $id
+     * @return MessageSubscriptionRequest
      */
-    public function getActivityId()
-    {
-        return $this->activityId;
-    }
-
-    /**
-     * @param mixed $createdDate
-     * @return $this
-     */
-    public function setCreatedDate($createdDate)
-    {
-        $this->createdDate = $createdDate;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedDate()
-    {
-        return $this->createdDate;
-    }
-
-    /**
-     * @param mixed $eventName
-     * @return $this
-     */
-    public function setEventName($eventName)
-    {
-        $this->eventName = $eventName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEventName()
-    {
-        return $this->eventName;
-    }
-
-    /**
-     * @param mixed $eventType
-     * @return $this
-     */
-    public function setEventType($eventType)
-    {
-        $this->eventType = $eventType;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEventType()
-    {
-        return $this->eventType;
-    }
-
-    /**
-     * @param mixed $executionId
-     * @return $this
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $id
-     * @return $this
-     */
-    public function setId($id)
+    public function setId(string $id): MessageSubscriptionRequest
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getId()
+    public function getEventType(): string
     {
-        return $this->id;
+        return $this->eventType;
     }
 
     /**
-     * @param mixed $messageName
-     * @return $this
+     * @param string $eventType
+     * @return MessageSubscriptionRequest
      */
-    public function setMessageName($messageName)
+    public function setEventType(string $eventType): MessageSubscriptionRequest
     {
-        $this->messageName = $messageName;
+        $this->eventType = $eventType;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMessageName()
+    public function getEventName(): string
     {
-        return $this->messageName;
+        return $this->eventName;
     }
 
     /**
-     * @param mixed $processInstanceId
-     * @return $this
+     * @param string $eventName
+     * @return MessageSubscriptionRequest
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setEventName(string $eventName): MessageSubscriptionRequest
+    {
+        $this->eventName = $eventName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return MessageSubscriptionRequest
+     */
+    public function setExecutionId(string $executionId): MessageSubscriptionRequest
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
+    {
+        return $this->processInstanceId;
+    }
+
+    /**
+     * @param string $processInstanceId
+     * @return MessageSubscriptionRequest
+     */
+    public function setProcessInstanceId(string $processInstanceId): MessageSubscriptionRequest
     {
         $this->processInstanceId = $processInstanceId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getActivityId(): string
     {
-        return $this->processInstanceId;
+        return $this->activityId;
     }
 
     /**
-     * @param mixed $variables
-     * @return $this
+     * @param string $activityId
+     * @return MessageSubscriptionRequest
      */
-    public function setVariables($variables)
+    public function setActivityId(string $activityId): MessageSubscriptionRequest
     {
-        $this->variables = $variables;
+        $this->activityId = $activityId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVariables()
+    public function getCreatedDate(): string
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * @param string $createdDate
+     * @return MessageSubscriptionRequest
+     */
+    public function setCreatedDate(string $createdDate): MessageSubscriptionRequest
+    {
+        $this->createdDate = $createdDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessageName(): string
+    {
+        return $this->messageName;
+    }
+
+    /**
+     * @param string $messageName
+     * @return MessageSubscriptionRequest
+     */
+    public function setMessageName(string $messageName): MessageSubscriptionRequest
+    {
+        $this->messageName = $messageName;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getVariables(): array
     {
         return $this->variables;
     }
 
-
+    /**
+     * @param array $variables
+     * @return MessageSubscriptionRequest
+     */
+    public function setVariables(array $variables): MessageSubscriptionRequest
+    {
+        $this->variables = $variables;
+        return $this;
+    }
 }

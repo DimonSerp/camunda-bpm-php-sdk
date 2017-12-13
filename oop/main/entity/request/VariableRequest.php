@@ -12,81 +12,87 @@ namespace org\provectus\php\sdk\entity\request;
 
 class VariableRequest extends Request
 {
+    /** @var string */
     protected $value;
+
+    /** @var string */
     protected $type;
+
+    /** @var string */
     protected $modifications;
+
+    /** @var string */
     protected $deletions;
 
     /**
-     * @param mixed $deletions
-     * @return $this
+     * @return string
      */
-    public function setDeletions($deletions)
+    public function getValue(): string
     {
-        $this->deletions = $deletions;
-        return $this;
+        return $this->value;
     }
 
     /**
-     * @return mixed
+     * @param string $value
+     * @return VariableRequest
      */
-    public function getDeletions()
-    {
-        return $this->deletions;
-    }
-
-    /**
-     * @param mixed $modifications
-     * @return $this
-     */
-    public function setModifications($modifications)
-    {
-        $this->modifications = $modifications;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getModifications()
-    {
-        return $this->modifications;
-    }
-
-    /**
-     * @param mixed $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $value
-     */
-    public function setValue($value)
+    public function setValue(string $value): VariableRequest
     {
         $this->value = $value;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getValue()
+    public function getType(): string
     {
-        return $this->value;
+        return $this->type;
     }
 
+    /**
+     * @param string $type
+     * @return VariableRequest
+     */
+    public function setType(string $type): VariableRequest
+    {
+        $this->type = $type;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getModifications(): string
+    {
+        return $this->modifications;
+    }
+
+    /**
+     * @param string $modifications
+     * @return VariableRequest
+     */
+    public function setModifications(string $modifications): VariableRequest
+    {
+        $this->modifications = $modifications;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDeletions(): string
+    {
+        return $this->deletions;
+    }
+
+    /**
+     * @param string $deletions
+     * @return VariableRequest
+     */
+    public function setDeletions(string $deletions): VariableRequest
+    {
+        $this->deletions = $deletions;
+        return $this;
+    }
 }

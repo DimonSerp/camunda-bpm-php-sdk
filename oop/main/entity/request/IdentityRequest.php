@@ -9,26 +9,24 @@
 
 namespace org\provectus\php\sdk\entity\request;
 
-
 class IdentityRequest extends Request
 {
+    /** @var string */
     protected $userId;
 
     /**
-     * @param mixed $userId
+     * @param string $userId
      */
-    public function setUserId($userId)
+    public function setUserId(string $userId)
     {
         $this->userId = $userId;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getUserId()
     {
         return $this->userId;
     }
-
-
 }

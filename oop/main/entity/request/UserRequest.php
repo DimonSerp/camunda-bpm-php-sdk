@@ -12,289 +12,339 @@ namespace org\provectus\php\sdk\entity\request;
 
 class UserRequest extends Request
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $firstName;
+
+    /** @var string */
     protected $firstNameLike;
+
+    /** @var string */
     protected $lastName;
+
+    /** @var string */
     protected $lastNameLike;
+
+    /** @var string */
     protected $email;
+
+    /** @var string */
     protected $emailLike;
+
+    /** @var string */
     protected $memberOfGroup;
+
+    /** @var string */
+    protected $memberOfTenant;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
+
+    /** @var string */
     protected $password;
+
+    /** @var ProfileRequest */
     protected $profile;
+
+    /** @var CredentialsRequest */
     protected $credentials;
 
     /**
-     * @param mixed $email
-     * @return $this
+     * @return string
      */
-    public function setEmail($email)
+    public function getId(): string
     {
-        $this->email = $email;
-        return $this;
+        return $this->id;
     }
 
     /**
-     * @return mixed
+     * @param string $id
+     * @return UserRequest
      */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $emailLike
-     * @return $this
-     */
-    public function setEmailLike($emailLike)
-    {
-        $this->emailLike = $emailLike;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEmailLike()
-    {
-        return $this->emailLike;
-    }
-
-    /**
-     * @param mixed $firstName
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param mixed $firstNameLike
-     * @return $this
-     */
-    public function setFirstNameLike($firstNameLike)
-    {
-        $this->firstNameLike = $firstNameLike;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstNameLike()
-    {
-        return $this->firstNameLike;
-    }
-
-    /**
-     * @param mixed $firstResult
-     * @return $this
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $id
-     * @return $this
-     */
-    public function setId($id)
+    public function setId(string $id): UserRequest
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getId()
+    public function getFirstName(): string
     {
-        return $this->id;
+        return $this->firstName;
     }
 
     /**
-     * @param mixed $lastName
-     * @return $this
+     * @param string $firstName
+     * @return UserRequest
      */
-    public function setLastName($lastName)
+    public function setFirstName(string $firstName): UserRequest
+    {
+        $this->firstName = $firstName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstNameLike(): string
+    {
+        return $this->firstNameLike;
+    }
+
+    /**
+     * @param string $firstNameLike
+     * @return UserRequest
+     */
+    public function setFirstNameLike(string $firstNameLike): UserRequest
+    {
+        $this->firstNameLike = $firstNameLike;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     * @return UserRequest
+     */
+    public function setLastName(string $lastName): UserRequest
     {
         $this->lastName = $lastName;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getLastName()
+    public function getLastNameLike(): string
     {
-        return $this->lastName;
+        return $this->lastNameLike;
     }
 
     /**
-     * @param mixed $lastNameLike
-     * @return $this
+     * @param string $lastNameLike
+     * @return UserRequest
      */
-    public function setLastNameLike($lastNameLike)
+    public function setLastNameLike(string $lastNameLike): UserRequest
     {
         $this->lastNameLike = $lastNameLike;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getLastNameLike()
+    public function getEmail(): string
     {
-        return $this->lastNameLike;
+        return $this->email;
     }
 
     /**
-     * @param mixed $maxResults
-     * @return $this
+     * @param string $email
+     * @return UserRequest
      */
-    public function setMaxResults($maxResults)
+    public function setEmail(string $email): UserRequest
     {
-        $this->maxResults = $maxResults;
+        $this->email = $email;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMaxResults()
+    public function getEmailLike(): string
     {
-        return $this->maxResults;
+        return $this->emailLike;
     }
 
     /**
-     * @param mixed $memberOfGroup
-     * @return $this
+     * @param string $emailLike
+     * @return UserRequest
      */
-    public function setMemberOfGroup($memberOfGroup)
+    public function setEmailLike(string $emailLike): UserRequest
+    {
+        $this->emailLike = $emailLike;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMemberOfGroup(): string
+    {
+        return $this->memberOfGroup;
+    }
+
+    /**
+     * @param string $memberOfGroup
+     * @return UserRequest
+     */
+    public function setMemberOfGroup(string $memberOfGroup): UserRequest
     {
         $this->memberOfGroup = $memberOfGroup;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMemberOfGroup()
+    public function getMemberOfTenant(): string
     {
-        return $this->memberOfGroup;
+        return $this->memberOfTenant;
     }
 
     /**
-     * @param mixed $password
-     * @return $this
+     * @param string $memberOfTenant
+     * @return UserRequest
      */
-    public function setPassword($password)
+    public function setMemberOfTenant(string $memberOfTenant): UserRequest
     {
-        $this->password = $password;
+        $this->memberOfTenant = $memberOfTenant;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getPassword()
+    public function getSortBy(): string
     {
-        return $this->password;
+        return $this->sortBy;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $sortBy
+     * @return UserRequest
      */
-    public function setSortBy($sortBy)
+    public function setSortBy(string $sortBy): UserRequest
     {
         $this->sortBy = $sortBy;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortBy()
+    public function getSortOrder(): string
     {
-        return $this->sortBy;
+        return $this->sortOrder;
     }
 
     /**
-     * @param mixed $sortOrder
-     * @return $this
+     * @param string $sortOrder
+     * @return UserRequest
      */
-    public function setSortOrder($sortOrder)
+    public function setSortOrder(string $sortOrder): UserRequest
     {
         $this->sortOrder = $sortOrder;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getSortOrder()
+    public function getFirstResult(): int
     {
-        return $this->sortOrder;
+        return $this->firstResult;
     }
 
     /**
-     * @param \org\provectus\php\sdk\entity\request\CredentialsRequest $credentials
-     * @return $this
+     * @param int $firstResult
+     * @return UserRequest
      */
-    public function setCredentials(CredentialsRequest $credentials)
+    public function setFirstResult(int $firstResult): UserRequest
     {
-        $this->credentials = $credentials;
+        $this->firstResult = $firstResult;
         return $this;
     }
 
     /**
-     * @return \org\provectus\php\sdk\entity\request\CredentialsRequest
+     * @return int
      */
-    public function getCredentials()
+    public function getMaxResults(): int
     {
-        return $this->credentials;
+        return $this->maxResults;
     }
 
     /**
-     * @param \org\provectus\php\sdk\entity\request\ProfileRequest $profile
-     * @return $this
+     * @param int $maxResults
+     * @return UserRequest
      */
-    public function setProfile(ProfileRequest $profile)
+    public function setMaxResults(int $maxResults): UserRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     * @return UserRequest
+     */
+    public function setPassword(string $password): UserRequest
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+    /**
+     * @return ProfileRequest
+     */
+    public function getProfile(): ProfileRequest
+    {
+        return $this->profile;
+    }
+
+    /**
+     * @param ProfileRequest $profile
+     * @return UserRequest
+     */
+    public function setProfile(ProfileRequest $profile): UserRequest
     {
         $this->profile = $profile;
         return $this;
     }
 
     /**
-     * @return \org\provectus\php\sdk\entity\request\ProfileRequest
+     * @return CredentialsRequest
      */
-    public function getProfile()
+    public function getCredentials(): CredentialsRequest
     {
-        return $this->profile;
+        return $this->credentials;
+    }
+
+    /**
+     * @param CredentialsRequest $credentials
+     * @return UserRequest
+     */
+    public function setCredentials(CredentialsRequest $credentials): UserRequest
+    {
+        $this->credentials = $credentials;
+        return $this;
     }
 }

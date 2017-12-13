@@ -9,180 +9,194 @@
 
 namespace org\provectus\php\sdk\entity\request;
 
-
 class GroupRequest extends Request
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $nameLike;
+
+    /** @var string */
     protected $type;
+
+    /** @var string */
     protected $member;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $firstResult
-     * @return $this
+     * @return string
      */
-    public function setFirstResult($firstResult)
+    public function getId(): string
     {
-        $this->firstResult = $firstResult;
-        return $this;
+        return $this->id;
     }
 
     /**
-     * @return mixed
+     * @param string $id
+     * @return GroupRequest
      */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $id
-     * @return $this
-     */
-    public function setId($id)
+    public function setId(string $id): GroupRequest
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getId()
+    public function getName(): string
     {
-        return $this->id;
+        return $this->name;
     }
 
     /**
-     * @param mixed $maxResults
-     * @return $this
+     * @param string $name
+     * @return GroupRequest
      */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $member
-     * @return $this
-     */
-    public function setMember($member)
-    {
-        $this->member = $member;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMember()
-    {
-        return $this->member;
-    }
-
-    /**
-     * @param mixed $name
-     * @return $this
-     */
-    public function setName($name)
+    public function setName(string $name): GroupRequest
     {
         $this->name = $name;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getNameLike(): string
     {
-        return $this->name;
+        return $this->nameLike;
     }
 
     /**
-     * @param mixed $nameLike
-     * @return $this
+     * @param string $nameLike
+     * @return GroupRequest
      */
-    public function setNameLike($nameLike)
+    public function setNameLike(string $nameLike): GroupRequest
     {
         $this->nameLike = $nameLike;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getNameLike()
+    public function getType(): string
     {
-        return $this->nameLike;
+        return $this->type;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $type
+     * @return GroupRequest
      */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     * @return $this
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $type
-     * @return $this
-     */
-    public function setType($type)
+    public function setType(string $type): GroupRequest
     {
         $this->type = $type;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getType()
+    public function getMember(): string
     {
-        return $this->type;
+        return $this->member;
     }
 
+    /**
+     * @param string $member
+     * @return GroupRequest
+     */
+    public function setMember(string $member): GroupRequest
+    {
+        $this->member = $member;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return GroupRequest
+     */
+    public function setSortBy(string $sortBy): GroupRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return GroupRequest
+     */
+    public function setSortOrder(string $sortOrder): GroupRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return GroupRequest
+     */
+    public function setFirstResult(int $firstResult): GroupRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return GroupRequest
+     */
+    public function setMaxResults(int $maxResults): GroupRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

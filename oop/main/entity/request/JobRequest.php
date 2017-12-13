@@ -12,271 +12,318 @@ namespace org\provectus\php\sdk\entity\request;
 
 class JobRequest extends Request
 {
+    /** @var string */
     protected $jobId;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
+    protected $processDefinitionId;
+
+    /** @var string */
+    protected $processDefinitionKey;
+
+    /** @var bool */
     protected $withRetriesLeft;
+
+    /** @var bool */
     protected $executable;
+
+    /** @var bool */
     protected $timers;
+
+    /** @var bool */
     protected $messages;
-    protected $dueDate;
 
-    /**
-     * @param mixed $dueDate
-     */
-    public function setDueDate($dueDate)
-    {
-        $this->dueDate = $dueDate;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDueDate()
-    {
-        return $this->dueDate;
-    }
-
+    /** @var string */
     protected $dueDates;
+
+    /** @var bool */
     protected $withException;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
     /**
-     * @param mixed $dueDates
-     * @return $this
+     * @return string
      */
-    public function setDueDates($dueDates)
+    public function getJobId(): string
     {
-        $this->dueDates = $dueDates;
-        return $this;
+        return $this->jobId;
     }
 
     /**
-     * @return mixed
+     * @param string $jobId
+     * @return JobRequest
      */
-    public function getDueDates()
-    {
-        return $this->dueDates;
-    }
-
-    /**
-     * @param mixed $executable
-     * @return $this
-     */
-    public function setExecutable($executable)
-    {
-        $this->executable = $executable;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutable()
-    {
-        return $this->executable;
-    }
-
-    /**
-     * @param mixed $executionId
-     * @return $this
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $firstResult
-     * @return $this
-     */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $jobId
-     * @return $this
-     */
-    public function setJobId($jobId)
+    public function setJobId(string $jobId): JobRequest
     {
         $this->jobId = $jobId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getJobId()
+    public function getProcessInstanceId(): string
     {
-        return $this->jobId;
+        return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $maxResults
-     * @return $this
+     * @param string $processInstanceId
+     * @return JobRequest
      */
-    public function setMaxResults($maxResults)
-    {
-        $this->maxResults = $maxResults;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $messages
-     * @return $this
-     */
-    public function setMessages($messages)
-    {
-        $this->messages = $messages;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMessages()
-    {
-        return $this->messages;
-    }
-
-    /**
-     * @param mixed $processInstanceId
-     * @return $this
-     */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessInstanceId(string $processInstanceId): JobRequest
     {
         $this->processInstanceId = $processInstanceId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getExecutionId(): string
     {
-        return $this->processInstanceId;
+        return $this->executionId;
     }
 
     /**
-     * @param mixed $sortBy
-     * @return $this
+     * @param string $executionId
+     * @return JobRequest
      */
-    public function setSortBy($sortBy)
+    public function setExecutionId(string $executionId): JobRequest
     {
-        $this->sortBy = $sortBy;
+        $this->executionId = $executionId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortBy()
+    public function getProcessDefinitionId(): string
     {
-        return $this->sortBy;
+        return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $sortOrder
-     * @return $this
+     * @param string $processDefinitionId
+     * @return JobRequest
      */
-    public function setSortOrder($sortOrder)
+    public function setProcessDefinitionId(string $processDefinitionId): JobRequest
     {
-        $this->sortOrder = $sortOrder;
+        $this->processDefinitionId = $processDefinitionId;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSortOrder()
+    public function getProcessDefinitionKey(): string
     {
-        return $this->sortOrder;
+        return $this->processDefinitionKey;
     }
 
     /**
-     * @param mixed $timers
-     * @return $this
+     * @param string $processDefinitionKey
+     * @return JobRequest
      */
-    public function setTimers($timers)
+    public function setProcessDefinitionKey(string $processDefinitionKey): JobRequest
     {
-        $this->timers = $timers;
+        $this->processDefinitionKey = $processDefinitionKey;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getTimers()
+    public function isWithRetriesLeft(): bool
     {
-        return $this->timers;
+        return $this->withRetriesLeft;
     }
 
     /**
-     * @param mixed $withException
-     * @return $this
+     * @param bool $withRetriesLeft
+     * @return JobRequest
      */
-    public function setWithException($withException)
-    {
-        $this->withException = $withException;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getWithException()
-    {
-        return $this->withException;
-    }
-
-    /**
-     * @param mixed $withRetriesLeft
-     * @return $this
-     */
-    public function setWithRetriesLeft($withRetriesLeft)
+    public function setWithRetriesLeft(bool $withRetriesLeft): JobRequest
     {
         $this->withRetriesLeft = $withRetriesLeft;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getWithRetriesLeft()
+    public function isExecutable(): bool
     {
-        return $this->withRetriesLeft;
+        return $this->executable;
     }
 
+    /**
+     * @param bool $executable
+     * @return JobRequest
+     */
+    public function setExecutable(bool $executable): JobRequest
+    {
+        $this->executable = $executable;
+        return $this;
+    }
 
+    /**
+     * @return bool
+     */
+    public function isTimers(): bool
+    {
+        return $this->timers;
+    }
+
+    /**
+     * @param bool $timers
+     * @return JobRequest
+     */
+    public function setTimers(bool $timers): JobRequest
+    {
+        $this->timers = $timers;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isMessages(): bool
+    {
+        return $this->messages;
+    }
+
+    /**
+     * @param bool $messages
+     * @return JobRequest
+     */
+    public function setMessages(bool $messages): JobRequest
+    {
+        $this->messages = $messages;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDueDates(): string
+    {
+        return $this->dueDates;
+    }
+
+    /**
+     * @param string $dueDates
+     * @return JobRequest
+     */
+    public function setDueDates(string $dueDates): JobRequest
+    {
+        $this->dueDates = $dueDates;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isWithException(): bool
+    {
+        return $this->withException;
+    }
+
+    /**
+     * @param bool $withException
+     * @return JobRequest
+     */
+    public function setWithException(bool $withException): JobRequest
+    {
+        $this->withException = $withException;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return JobRequest
+     */
+    public function setSortBy(string $sortBy): JobRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return JobRequest
+     */
+    public function setSortOrder(string $sortOrder): JobRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return JobRequest
+     */
+    public function setFirstResult(int $firstResult): JobRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return JobRequest
+     */
+    public function setMaxResults(int $maxResults): JobRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
 }

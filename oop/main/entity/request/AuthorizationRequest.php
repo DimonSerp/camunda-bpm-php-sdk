@@ -11,279 +11,318 @@ namespace org\provectus\php\sdk\entity\request;
 
 class AuthorizationRequest extends Request
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $type;
-    protected $permissions;
+
+    /** @var string */
     protected $userId;
+
+    /** @var string */
     protected $userIdIn;
+
+    /** @var string */
     protected $groupId;
+
+    /** @var string */
     protected $groupIdIn;
+
+    /** @var string */
     protected $resourceType;
+
+    /** @var string */
     protected $resourceId;
+
+    /** @var string */
     protected $sortBy;
+
+    /** @var string */
     protected $sortOrder;
+
+    /** @var int */
     protected $firstResult;
+
+    /** @var int */
     protected $maxResults;
 
+    /** @var string */
     protected $permissionName;
+
+    /** @var string */
     protected $permissionValue;
+
+    /** @var string */
     protected $resourceName;
 
     /**
-     * @param mixed $firstResult
+     * @return string
      */
-    public function setFirstResult($firstResult)
-    {
-        $this->firstResult = $firstResult;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstResult()
-    {
-        return $this->firstResult;
-    }
-
-    /**
-     * @param mixed $groupId
-     */
-    public function setGroupId($groupId)
-    {
-        $this->groupId = $groupId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGroupId()
-    {
-        return $this->groupId;
-    }
-
-    /**
-     * @param mixed $groupIdIn
-     */
-    public function setGroupIdIn($groupIdIn)
-    {
-        $this->groupIdIn = $groupIdIn;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getGroupIdIn()
-    {
-        return $this->groupIdIn;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $maxResults
+     * @param string $id
+     * @return AuthorizationRequest
      */
-    public function setMaxResults($maxResults)
+    public function setId(string $id): AuthorizationRequest
     {
-        $this->maxResults = $maxResults;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMaxResults()
-    {
-        return $this->maxResults;
-    }
-
-    /**
-     * @param mixed $permissionName
-     */
-    public function setPermissionName($permissionName)
-    {
-        $this->permissionName = $permissionName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPermissionName()
-    {
-        return $this->permissionName;
-    }
-
-    /**
-     * @param mixed $permissionValue
-     */
-    public function setPermissionValue($permissionValue)
-    {
-        $this->permissionValue = $permissionValue;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPermissionValue()
-    {
-        return $this->permissionValue;
-    }
-
-    /**
-     * @param mixed $permissions
-     */
-    public function setPermissions($permissions)
-    {
-        $this->permissions = $permissions;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPermissions()
-    {
-        return $this->permissions;
-    }
-
-    /**
-     * @param mixed $resourceId
-     */
-    public function setResourceId($resourceId)
-    {
-        $this->resourceId = $resourceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getResourceId()
-    {
-        return $this->resourceId;
-    }
-
-    /**
-     * @param mixed $resourceName
-     */
-    public function setResourceName($resourceName)
-    {
-        $this->resourceName = $resourceName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getResourceName()
-    {
-        return $this->resourceName;
-    }
-
-    /**
-     * @param mixed $resourceType
-     */
-    public function setResourceType($resourceType)
-    {
-        $this->resourceType = $resourceType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getResourceType()
-    {
-        return $this->resourceType;
-    }
-
-    /**
-     * @param mixed $sortBy
-     */
-    public function setSortBy($sortBy)
-    {
-        $this->sortBy = $sortBy;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortBy()
-    {
-        return $this->sortBy;
-    }
-
-    /**
-     * @param mixed $sortOrder
-     */
-    public function setSortOrder($sortOrder)
-    {
-        $this->sortOrder = $sortOrder;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSortOrder()
-    {
-        return $this->sortOrder;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $userId
+     * @param string $type
+     * @return AuthorizationRequest
      */
-    public function setUserId($userId)
+    public function setType(string $type): AuthorizationRequest
     {
-        $this->userId = $userId;
+        $this->type = $type;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getUserId()
+    public function getUserId(): string
     {
         return $this->userId;
     }
 
     /**
-     * @param mixed $userIdIn
+     * @param string $userId
+     * @return AuthorizationRequest
      */
-    public function setUserIdIn($userIdIn)
+    public function setUserId(string $userId): AuthorizationRequest
     {
-        $this->userIdIn = $userIdIn;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getUserIdIn()
+    public function getUserIdIn(): array
     {
-        return $this->userIdIn;
+        return explode(',', $this->userIdIn);
     }
 
+    /**
+     * @param array $userIds
+     * @return AuthorizationRequest
+     */
+    public function setUserIdIn(array $userIds): AuthorizationRequest
+    {
+        $this->userIdIn = join(',', $userIds);
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getGroupId(): string
+    {
+        return $this->groupId;
+    }
+
+    /**
+     * @param string $groupId
+     * @return AuthorizationRequest
+     */
+    public function setGroupId(string $groupId): AuthorizationRequest
+    {
+        $this->groupId = $groupId;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGroupIdIn(): array
+    {
+        return explode(',', $this->groupIdIn);
+    }
+
+    /**
+     * @param array $groupIds
+     * @return AuthorizationRequest
+     */
+    public function setGroupIdIn(array $groupIds): AuthorizationRequest
+    {
+        $this->groupIdIn = implode(',', $groupIds);
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResourceType(): string
+    {
+        return $this->resourceType;
+    }
+
+    /**
+     * @param string $resourceType
+     * @return AuthorizationRequest
+     */
+    public function setResourceType(string $resourceType): AuthorizationRequest
+    {
+        $this->resourceType = $resourceType;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResourceId(): string
+    {
+        return $this->resourceId;
+    }
+
+    /**
+     * @param string $resourceId
+     * @return AuthorizationRequest
+     */
+    public function setResourceId(string $resourceId): AuthorizationRequest
+    {
+        $this->resourceId = $resourceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortBy(): string
+    {
+        return $this->sortBy;
+    }
+
+    /**
+     * @param string $sortBy
+     * @return AuthorizationRequest
+     */
+    public function setSortBy(string $sortBy): AuthorizationRequest
+    {
+        $this->sortBy = $sortBy;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSortOrder(): string
+    {
+        return $this->sortOrder;
+    }
+
+    /**
+     * @param string $sortOrder
+     * @return AuthorizationRequest
+     */
+    public function setSortOrder(string $sortOrder): AuthorizationRequest
+    {
+        $this->sortOrder = $sortOrder;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstResult(): int
+    {
+        return $this->firstResult;
+    }
+
+    /**
+     * @param int $firstResult
+     * @return AuthorizationRequest
+     */
+    public function setFirstResult(int $firstResult): AuthorizationRequest
+    {
+        $this->firstResult = $firstResult;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxResults(): int
+    {
+        return $this->maxResults;
+    }
+
+    /**
+     * @param int $maxResults
+     * @return AuthorizationRequest
+     */
+    public function setMaxResults(int $maxResults): AuthorizationRequest
+    {
+        $this->maxResults = $maxResults;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPermissionName(): string
+    {
+        return $this->permissionName;
+    }
+
+    /**
+     * @param string $permissionName
+     * @return AuthorizationRequest
+     */
+    public function setPermissionName(string $permissionName): AuthorizationRequest
+    {
+        $this->permissionName = $permissionName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPermissionValue(): string
+    {
+        return $this->permissionValue;
+    }
+
+    /**
+     * @param string $permissionValue
+     * @return AuthorizationRequest
+     */
+    public function setPermissionValue(string $permissionValue): AuthorizationRequest
+    {
+        $this->permissionValue = $permissionValue;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResourceName(): string
+    {
+        return $this->resourceName;
+    }
+
+    /**
+     * @param string $resourceName
+     * @return AuthorizationRequest
+     */
+    public function setResourceName(string $resourceName): AuthorizationRequest
+    {
+        $this->resourceName = $resourceName;
+        return $this;
+    }
 }
