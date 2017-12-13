@@ -2,6 +2,7 @@
 
 namespace org\provectus\CamundaSDK\service;
 
+use org\provectus\CamundaSDK\entity\response\DeploymentWithDefinitions;
 use org\provectus\CamundaSDK\exception\CamundaApiException;
 
 class DeploymentService extends RequestService
@@ -16,9 +17,12 @@ class DeploymentService extends RequestService
      * @throws CamundaApiException
      * @return mixed server response
      */
-    public function deploy($name, $bpmnFilePath)
+    public function deploy(string $name, string $bpmnFilePath)
     {
-        // TODO: add work with binary content
+        if (!is_file($bpmnFilePath)) {
+            throw new CamundaApiException('BPMN file path not correct!');
+        }
+
         $this->setRequestUrl('/deployment/create');
         $this->setRequestData([
             'deployment-name' => $name,
@@ -28,8 +32,8 @@ class DeploymentService extends RequestService
             'tenant-id' => $this->tenantId,
         ]);
         $this->setRequestMethod('POST');
+        $deployment = new DeploymentWithDefinitions();
 
-        // TODO: add Entity Response
-        return $this->execute();
+        return $deployment->cast($this->execute());
     }
 }

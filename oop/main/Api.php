@@ -46,7 +46,7 @@ class Api
     // CONFIG
     private $restApiUrl = 'http://localhost:8080/engine-rest/';
 
-    public function __construct($restApiUrl = null, $tenantId = null)
+    public function __construct(?string $restApiUrl = null, ?string $tenantId = null)
     {
         if ($restApiUrl != null) {
             $this->restApiUrl = $restApiUrl;

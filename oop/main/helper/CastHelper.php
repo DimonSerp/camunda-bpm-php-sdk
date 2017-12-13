@@ -12,7 +12,6 @@ namespace org\provectus\CamundaSDK\helper;
 
 class CastHelper
 {
-
     /**
      * Helps to cast a standard class object
      * into a specific class object
