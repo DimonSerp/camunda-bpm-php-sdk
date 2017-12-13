@@ -8,8 +8,8 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\AuthorizationRequest;
-use org\provectus\php\sdk\service\AuthorizationService;
+use org\provectus\CamundaSDK\entity\request\AuthorizationRequest;
+use org\provectus\CamundaSDK\service\AuthorizationService;
 
 include("../../vendor/autoload.php");
 

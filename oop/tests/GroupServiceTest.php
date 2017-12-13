@@ -10,12 +10,12 @@
 namespace org\provectus\php\tests;
 include('../../vendor/autoload.php');
 
-use org\provectus\php\sdk\entity\request\CredentialsRequest;
-use org\provectus\php\sdk\entity\request\GroupRequest;
-use org\provectus\php\sdk\entity\request\ProfileRequest;
-use org\provectus\php\sdk\entity\request\UserRequest;
-use org\provectus\php\sdk\service\GroupService;
-use org\provectus\php\sdk\service\UserService;
+use org\provectus\CamundaSDK\entity\request\CredentialsRequest;
+use org\provectus\CamundaSDK\entity\request\GroupRequest;
+use org\provectus\CamundaSDK\entity\request\ProfileRequest;
+use org\provectus\CamundaSDK\entity\request\UserRequest;
+use org\provectus\CamundaSDK\service\GroupService;
+use org\provectus\CamundaSDK\service\UserService;
 
 class GroupServiceTest extends \PHPUnit_Framework_TestCase
 {

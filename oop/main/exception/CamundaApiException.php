@@ -1,6 +1,6 @@
 <?php
 
-namespace org\provectus\php\sdk\exception;
+namespace org\provectus\CamundaSDK\exception;
 
 use Exception;
 

@@ -8,11 +8,11 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\ProcessDefinitionRequest;
-use org\provectus\php\sdk\entity\request\ProcessInstanceRequest;
-use org\provectus\php\sdk\entity\request\StatisticRequest;
-use org\provectus\php\sdk\service\ProcessDefinitionService;
-use org\provectus\php\sdk\service\ProcessInstanceService;
+use org\provectus\CamundaSDK\entity\request\ProcessDefinitionRequest;
+use org\provectus\CamundaSDK\entity\request\ProcessInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\StatisticRequest;
+use org\provectus\CamundaSDK\service\ProcessDefinitionService;
+use org\provectus\CamundaSDK\service\ProcessInstanceService;
 
 include('../../vendor/autoload.php');
 

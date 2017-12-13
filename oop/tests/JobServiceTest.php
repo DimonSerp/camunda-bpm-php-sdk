@@ -8,8 +8,8 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\JobRequest;
-use org\provectus\php\sdk\service\JobService;
+use org\provectus\CamundaSDK\entity\request\JobRequest;
+use org\provectus\CamundaSDK\service\JobService;
 
 include('../../vendor/autoload.php');
 

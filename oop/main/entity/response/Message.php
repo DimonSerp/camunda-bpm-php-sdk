@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\entity\response;
+namespace org\provectus\CamundaSDK\entity\response;
 
-use org\provectus\php\sdk\helper\CastHelper;
+use org\provectus\CamundaSDK\helper\CastHelper;
 
 class Message extends CastHelper
 {

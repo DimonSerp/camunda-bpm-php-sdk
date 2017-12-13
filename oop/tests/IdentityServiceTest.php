@@ -9,8 +9,8 @@
 
 namespace org\provectus\php\tests;
 
-use org\provectus\php\sdk\entity\request\IdentityRequest;
-use org\provectus\php\sdk\service\IdentityService;
+use org\provectus\CamundaSDK\entity\request\IdentityRequest;
+use org\provectus\CamundaSDK\service\IdentityService;
 
 include("../../vendor/autoload.php");
 

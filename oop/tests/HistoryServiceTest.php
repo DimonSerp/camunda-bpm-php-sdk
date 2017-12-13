@@ -8,11 +8,11 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\HistoricActivityInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricProcessInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricVariableInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricActivityStatisticRequest;
-use org\provectus\php\sdk\service\HistoryService;
+use org\provectus\CamundaSDK\entity\request\HistoricActivityInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricProcessInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricVariableInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricActivityStatisticRequest;
+use org\provectus\CamundaSDK\service\HistoryService;
 
 include('../../vendor/autoload.php');
 

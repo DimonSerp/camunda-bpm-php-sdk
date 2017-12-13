@@ -8,9 +8,9 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\ProcessInstanceRequest;
-use org\provectus\php\sdk\entity\request\VariableRequest;
-use org\provectus\php\sdk\service\ProcessInstanceService;
+use org\provectus\CamundaSDK\entity\request\ProcessInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\VariableRequest;
+use org\provectus\CamundaSDK\service\ProcessInstanceService;
 
 include('../../vendor/autoload.php');
 

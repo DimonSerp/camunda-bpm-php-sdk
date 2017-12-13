@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\helper;
+namespace org\provectus\CamundaSDK\helper;
 
 
 class CastHelper

@@ -7,15 +7,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\entity\request\ExecutionRequest;
-use org\provectus\php\sdk\entity\request\VariableRequest;
-use org\provectus\php\sdk\entity\request\MessageSubscriptionRequest;
-use org\provectus\php\sdk\entity\response\Execution;
-use org\provectus\php\sdk\entity\response\Variable;
-use org\provectus\php\sdk\entity\response\MessageSubscription;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\ExecutionRequest;
+use org\provectus\CamundaSDK\entity\request\VariableRequest;
+use org\provectus\CamundaSDK\entity\request\MessageSubscriptionRequest;
+use org\provectus\CamundaSDK\entity\response\Execution;
+use org\provectus\CamundaSDK\entity\response\Variable;
+use org\provectus\CamundaSDK\entity\response\MessageSubscription;
 
 class ExecutionService extends RequestService
 {
@@ -48,7 +48,7 @@ class ExecutionService extends RequestService
      * @link http://docs.camunda.org/api-references/rest/#!/execution/get-query
      * @link http://docs.camunda.org/api-references/rest/#!/execution/post-query
      *
-     * @param \org\provectus\php\sdk\entity\request\ExecutionRequest $request Filter parameters
+     * @param \org\provectus\CamundaSDK\entity\request\ExecutionRequest $request Filter parameters
      * @param bool                                                 $isPostRequest Switch for POST/GET request
      * @throws CamundaApiException
      * @return Execution[] List of all executions
@@ -82,7 +82,7 @@ class ExecutionService extends RequestService
      * @link http://docs.camunda.org/api-references/rest/#!/execution/get-query-count
      * @link http://docs.camunda.org/api-references/rest/#!/execution/post-query-count
      *
-     * @param \org\provectus\php\sdk\entity\request\ExecutionRequest $request Filter parameters
+     * @param \org\provectus\CamundaSDK\entity\request\ExecutionRequest $request Filter parameters
      * @param bool                                                 $isPostRequest Switch for POST/GET request
      * @throws CamundaApiException
      * @return int count of the executions
@@ -112,7 +112,7 @@ class ExecutionService extends RequestService
      * @param String $id ID of the execution which contains the requested variable
      * @param String $variableId ID of the requested variable
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\Variable $this Requested variable
+     * @return \org\provectus\CamundaSDK\entity\response\Variable $this Requested variable
      */
     public function getExecutionVariable(string $id, string $variableId): Variable
     {
@@ -255,7 +255,7 @@ class ExecutionService extends RequestService
      * @param String $id Execution ID
      * @param String $messageName The name of the message that the subscription corresponds to.
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\MessageSubscription $this requested MessageSubscription
+     * @return \org\provectus\CamundaSDK\entity\response\MessageSubscription $this requested MessageSubscription
      */
     public function getMessageEventSubscription(string $id, string $messageName): MessageSubscription
     {

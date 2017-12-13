@@ -7,13 +7,13 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\entity\request\CredentialsRequest;
-use org\provectus\php\sdk\entity\request\ProfileRequest;
-use org\provectus\php\sdk\entity\request\Request;
-use org\provectus\php\sdk\entity\request\VariableRequest;
-use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\CredentialsRequest;
+use org\provectus\CamundaSDK\entity\request\ProfileRequest;
+use org\provectus\CamundaSDK\entity\request\Request;
+use org\provectus\CamundaSDK\entity\request\VariableRequest;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
 
 class RequestService
 {

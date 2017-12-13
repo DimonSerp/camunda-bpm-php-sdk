@@ -9,7 +9,7 @@
 
 namespace org\provectus\php\tests;
 
-use org\provectus\php\sdk\service\MessageService;
+use org\provectus\CamundaSDK\service\MessageService;
 
 include('../../vendor/autoload.php');
 

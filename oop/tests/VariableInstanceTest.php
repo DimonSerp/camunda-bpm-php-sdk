@@ -8,8 +8,8 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\VariableInstanceRequest;
-use org\provectus\php\sdk\service\VariableInstanceService;
+use org\provectus\CamundaSDK\entity\request\VariableInstanceRequest;
+use org\provectus\CamundaSDK\service\VariableInstanceService;
 
 include('../../vendor/autoload.php');
 

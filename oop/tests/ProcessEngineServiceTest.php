@@ -8,7 +8,7 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\service\ProcessEngineService;
+use org\provectus\CamundaSDK\service\ProcessEngineService;
 
 include('../../vendor/autoload.php');
 

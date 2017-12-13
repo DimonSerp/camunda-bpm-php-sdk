@@ -8,10 +8,10 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\ExecutionRequest;
-use org\provectus\php\sdk\entity\request\VariableRequest;
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\service\ExecutionService;
+use org\provectus\CamundaSDK\entity\request\ExecutionRequest;
+use org\provectus\CamundaSDK\entity\request\VariableRequest;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\service\ExecutionService;
 
 include("../../vendor/autoload.php");
 

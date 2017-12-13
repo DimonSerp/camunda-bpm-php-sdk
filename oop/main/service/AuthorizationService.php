@@ -7,12 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\entity\request\AuthorizationRequest;
-use org\provectus\php\sdk\entity\response\Authorization;
-use org\provectus\php\sdk\entity\response\ResourceOption;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\AuthorizationRequest;
+use org\provectus\CamundaSDK\entity\response\Authorization;
+use org\provectus\CamundaSDK\entity\response\ResourceOption;
 
 class AuthorizationService extends RequestService
 {
@@ -42,7 +42,7 @@ class AuthorizationService extends RequestService
      *
      * @param String $id authorization ID
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\Authorization $this requested authorization
+     * @return \org\provectus\CamundaSDK\entity\response\Authorization $this requested authorization
      */
     public function getAuthorization(string $id): Authorization
     {
@@ -150,7 +150,7 @@ class AuthorizationService extends RequestService
      * @Link http://docs.camunda.org/latest/api-references/rest/#authorization-authorization-resource-options
      *
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\ResourceOption
+     * @return \org\provectus\CamundaSDK\entity\response\ResourceOption
      */
     public function getResourceOption(): ResourceOption
     {
@@ -173,7 +173,7 @@ class AuthorizationService extends RequestService
      *
      * @param String $id authorization ID
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\ResourceOption
+     * @return \org\provectus\CamundaSDK\entity\response\ResourceOption
      */
     public function getResourceInstanceOption($id): ResourceOption
     {
@@ -195,7 +195,7 @@ class AuthorizationService extends RequestService
      *
      * @param AuthorizationRequest $request
      * @throws CamundaApiException
-     * @return \org\provectus\php\sdk\entity\response\Authorization
+     * @return \org\provectus\CamundaSDK\entity\response\Authorization
      */
     public function createAuthorization(AuthorizationRequest $request): Authorization
     {

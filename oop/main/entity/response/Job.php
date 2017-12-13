@@ -7,8 +7,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\entity\response;
-use org\provectus\php\sdk\helper\CastHelper;
+namespace org\provectus\CamundaSDK\entity\response;
+use org\provectus\CamundaSDK\helper\CastHelper;
 
 class Job extends CastHelper
 {

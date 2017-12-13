@@ -7,11 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\entity\request\IdentityRequest;
-use org\provectus\php\sdk\entity\response\Identity;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\IdentityRequest;
+use org\provectus\CamundaSDK\entity\response\Identity;
 
 class IdentityService extends RequestService
 {

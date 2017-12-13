@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\entity\request;
+namespace org\provectus\CamundaSDK\entity\request;
 
 
 class UserRequest extends Request

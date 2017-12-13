@@ -7,17 +7,17 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\entity\request\HistoricActivityInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricProcessInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricVariableInstanceRequest;
-use org\provectus\php\sdk\entity\request\HistoricActivityStatisticRequest;
-use org\provectus\php\sdk\entity\response\HistoricActivityInstance;
-use org\provectus\php\sdk\entity\response\HistoricProcessInstance;
-use org\provectus\php\sdk\entity\response\HistoricVariableInstance;
-use org\provectus\php\sdk\entity\response\HistoricActivityStatistic;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\HistoricActivityInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricProcessInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricVariableInstanceRequest;
+use org\provectus\CamundaSDK\entity\request\HistoricActivityStatisticRequest;
+use org\provectus\CamundaSDK\entity\response\HistoricActivityInstance;
+use org\provectus\CamundaSDK\entity\response\HistoricProcessInstance;
+use org\provectus\CamundaSDK\entity\response\HistoricVariableInstance;
+use org\provectus\CamundaSDK\entity\response\HistoricActivityStatistic;
 
 
 class HistoryService extends RequestService

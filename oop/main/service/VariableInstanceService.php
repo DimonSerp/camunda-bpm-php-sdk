@@ -7,11 +7,11 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
-use org\provectus\php\sdk\entity\request\VariableInstanceRequest;
-use org\provectus\php\sdk\entity\response\VariableInstance;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
+use org\provectus\CamundaSDK\entity\request\VariableInstanceRequest;
+use org\provectus\CamundaSDK\entity\response\VariableInstance;
 
 class VariableInstanceService extends RequestService
 {

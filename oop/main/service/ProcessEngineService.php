@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-namespace org\provectus\php\sdk\service;
+namespace org\provectus\CamundaSDK\service;
 
-use org\provectus\php\sdk\exception\CamundaApiException;
+use org\provectus\CamundaSDK\exception\CamundaApiException;
 
 class ProcessEngineService extends RequestService
 {

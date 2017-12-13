@@ -8,10 +8,10 @@
  */
 
 namespace org\provectus\php\tests;
-use org\provectus\php\sdk\entity\request\CredentialsRequest;
-use org\provectus\php\sdk\entity\request\ProfileRequest;
-use org\provectus\php\sdk\entity\request\UserRequest;
-use org\provectus\php\sdk\service\UserService;
+use org\provectus\CamundaSDK\entity\request\CredentialsRequest;
+use org\provectus\CamundaSDK\entity\request\ProfileRequest;
+use org\provectus\CamundaSDK\entity\request\UserRequest;
+use org\provectus\CamundaSDK\service\UserService;
 
 include('../../vendor/autoload.php');
 
