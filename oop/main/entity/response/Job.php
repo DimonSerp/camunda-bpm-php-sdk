@@ -12,108 +12,129 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Job extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $dueDate;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var int */
     protected $retries;
+
+    /** @var string */
     protected $exceptionMessage;
 
     /**
-     * @param mixed $dueDate
+     * @return string
      */
-    public function setDueDate($dueDate)
-    {
-        $this->dueDate = $dueDate;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDueDate()
-    {
-        return $this->dueDate;
-    }
-
-    /**
-     * @param mixed $exceptionMessage
-     */
-    public function setExceptionMessage($exceptionMessage)
-    {
-        $this->exceptionMessage = $exceptionMessage;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExceptionMessage()
-    {
-        return $this->exceptionMessage;
-    }
-
-    /**
-     * @param mixed $executionId
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $id
+     * @return Job
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setId(string $id): Job
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getDueDate(): string
+    {
+        return $this->dueDate;
+    }
+
+    /**
+     * @param string $dueDate
+     * @return Job
+     */
+    public function setDueDate(string $dueDate): Job
+    {
+        $this->dueDate = $dueDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $retries
+     * @param string $processInstanceId
+     * @return Job
      */
-    public function setRetries($retries)
+    public function setProcessInstanceId(string $processInstanceId): Job
     {
-        $this->retries = $retries;
+        $this->processInstanceId = $processInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getRetries()
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return Job
+     */
+    public function setExecutionId(string $executionId): Job
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRetries(): int
     {
         return $this->retries;
     }
 
+    /**
+     * @param int $retries
+     * @return Job
+     */
+    public function setRetries(int $retries): Job
+    {
+        $this->retries = $retries;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getExceptionMessage(): string
+    {
+        return $this->exceptionMessage;
+    }
+
+    /**
+     * @param string $exceptionMessage
+     * @return Job
+     */
+    public function setExceptionMessage(string $exceptionMessage): Job
+    {
+        $this->exceptionMessage = $exceptionMessage;
+        return $this;
+    }
 }

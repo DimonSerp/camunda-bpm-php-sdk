@@ -13,40 +13,45 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Variable extends CastHelper
 {
+    /** @var string */
     protected $value;
+
+    /** @var string */
     protected $type;
 
     /**
-     * @param mixed $type
+     * @return string
      */
-    public function setType($type)
+    public function getValue(): string
     {
-        $this->type = $type;
+        return $this->value;
     }
 
     /**
-     * @return mixed
+     * @param string $value
+     * @return Variable
      */
-    public function getType()
+    public function setValue(string $value): Variable
+    {
+        $this->value = $value;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $value
+     * @param string $type
+     * @return Variable
      */
-    public function setValue($value)
+    public function setType(string $type): Variable
     {
-        $this->value = $value;
+        $this->type = $type;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-
 }

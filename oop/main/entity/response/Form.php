@@ -13,40 +13,45 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Form extends CastHelper
 {
+    /** @var string */
     protected $key;
+
+    /** @var string */
     protected $contextPath;
 
     /**
-     * @param mixed $contextPath
+     * @return string
      */
-    public function setContextPath($contextPath)
+    public function getKey(): string
     {
-        $this->contextPath = $contextPath;
+        return $this->key;
     }
 
     /**
-     * @return mixed
+     * @param string $key
+     * @return Form
      */
-    public function getContextPath()
+    public function setKey(string $key): Form
+    {
+        $this->key = $key;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContextPath(): string
     {
         return $this->contextPath;
     }
 
     /**
-     * @param mixed $key
+     * @param string $contextPath
+     * @return Form
      */
-    public function setKey($key)
+    public function setContextPath(string $contextPath): Form
     {
-        $this->key = $key;
+        $this->contextPath = $contextPath;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getKey()
-    {
-        return $this->key;
-    }
-
-
 }

@@ -13,40 +13,45 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Identity extends CastHelper
 {
+    /** @var array */
     protected $groups;
+
+    /** @var array */
     protected $groupUsers;
 
     /**
-     * @param mixed $groupUsers
+     * @return array
      */
-    public function setGroupUsers($groupUsers)
+    public function getGroups(): array
     {
-        $this->groupUsers = $groupUsers;
+        return $this->groups;
     }
 
     /**
-     * @return mixed
+     * @param array $groups
+     * @return Identity
      */
-    public function getGroupUsers()
+    public function setGroups(array $groups): Identity
+    {
+        $this->groups = $groups;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGroupUsers(): array
     {
         return $this->groupUsers;
     }
 
     /**
-     * @param mixed $groups
+     * @param array $groupUsers
+     * @return Identity
      */
-    public function setGroups($groups)
+    public function setGroupUsers(array $groupUsers): Identity
     {
-        $this->groups = $groups;
+        $this->groupUsers = $groupUsers;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getGroups()
-    {
-        return $this->groups;
-    }
-
-
 }

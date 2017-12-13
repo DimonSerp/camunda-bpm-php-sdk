@@ -9,248 +9,301 @@
 
 namespace org\provectus\php\sdk\entity\response;
 
-
 use org\provectus\php\sdk\helper\CastHelper;
 
 class HistoricActivityInstance extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $parentActivityInstanceId;
+
+    /** @var string */
     protected $activityId;
+
+    /** @var string */
     protected $activityName;
+
+    /** @var string */
     protected $activityType;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $taskId;
+
+    /** @var string */
     protected $assignee;
+
+    /** @var string */
     protected $calledProcessInstanceId;
+
+    /** @var string */
     protected $startTime;
+
+    /** @var string */
     protected $endTime;
+
+    /** @var int */
     protected $durationInMillis;
 
     /**
-     * @param mixed $activityId
+     * @return string
      */
-    public function setActivityId($activityId)
-    {
-        $this->activityId = $activityId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityId()
-    {
-        return $this->activityId;
-    }
-
-    /**
-     * @param mixed $activityName
-     */
-    public function setActivityName($activityName)
-    {
-        $this->activityName = $activityName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityName()
-    {
-        return $this->activityName;
-    }
-
-    /**
-     * @param mixed $activityType
-     */
-    public function setActivityType($activityType)
-    {
-        $this->activityType = $activityType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityType()
-    {
-        return $this->activityType;
-    }
-
-    /**
-     * @param mixed $assignee
-     */
-    public function setAssignee($assignee)
-    {
-        $this->assignee = $assignee;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAssignee()
-    {
-        return $this->assignee;
-    }
-
-    /**
-     * @param mixed $calledProcessInstanceId
-     */
-    public function setCalledProcessInstanceId($calledProcessInstanceId)
-    {
-        $this->calledProcessInstanceId = $calledProcessInstanceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCalledProcessInstanceId()
-    {
-        return $this->calledProcessInstanceId;
-    }
-
-    /**
-     * @param mixed $durationInMillis
-     */
-    public function setDurationInMillis($durationInMillis)
-    {
-        $this->durationInMillis = $durationInMillis;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDurationInMillis()
-    {
-        return $this->durationInMillis;
-    }
-
-    /**
-     * @param mixed $endTime
-     */
-    public function setEndTime($endTime)
-    {
-        $this->endTime = $endTime;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEndTime()
-    {
-        return $this->endTime;
-    }
-
-    /**
-     * @param mixed $executionId
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $parentActivityInstanceId
+     * @param string $id
+     * @return HistoricActivityInstance
      */
-    public function setParentActivityInstanceId($parentActivityInstanceId)
+    public function setId(string $id): HistoricActivityInstance
     {
-        $this->parentActivityInstanceId = $parentActivityInstanceId;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getParentActivityInstanceId()
+    public function getParentActivityInstanceId(): string
     {
         return $this->parentActivityInstanceId;
     }
 
     /**
-     * @param mixed $processDefinitionId
+     * @param string $parentActivityInstanceId
+     * @return HistoricActivityInstance
      */
-    public function setProcessDefinitionId($processDefinitionId)
+    public function setParentActivityInstanceId(string $parentActivityInstanceId): HistoricActivityInstance
     {
-        $this->processDefinitionId = $processDefinitionId;
+        $this->parentActivityInstanceId = $parentActivityInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionId()
+    public function getActivityId(): string
+    {
+        return $this->activityId;
+    }
+
+    /**
+     * @param string $activityId
+     * @return HistoricActivityInstance
+     */
+    public function setActivityId(string $activityId): HistoricActivityInstance
+    {
+        $this->activityId = $activityId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivityName(): string
+    {
+        return $this->activityName;
+    }
+
+    /**
+     * @param string $activityName
+     * @return HistoricActivityInstance
+     */
+    public function setActivityName(string $activityName): HistoricActivityInstance
+    {
+        $this->activityName = $activityName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivityType(): string
+    {
+        return $this->activityType;
+    }
+
+    /**
+     * @param string $activityType
+     * @return HistoricActivityInstance
+     */
+    public function setActivityType(string $activityType): HistoricActivityInstance
+    {
+        $this->activityType = $activityType;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessDefinitionId(): string
     {
         return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $processDefinitionId
+     * @return HistoricActivityInstance
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessDefinitionId(string $processDefinitionId): HistoricActivityInstance
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->processDefinitionId = $processDefinitionId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $startTime
+     * @param string $processInstanceId
+     * @return HistoricActivityInstance
      */
-    public function setStartTime($startTime)
+    public function setProcessInstanceId(string $processInstanceId): HistoricActivityInstance
     {
-        $this->startTime = $startTime;
+        $this->processInstanceId = $processInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getStartTime()
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return HistoricActivityInstance
+     */
+    public function setExecutionId(string $executionId): HistoricActivityInstance
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaskId(): string
+    {
+        return $this->taskId;
+    }
+
+    /**
+     * @param string $taskId
+     * @return HistoricActivityInstance
+     */
+    public function setTaskId(string $taskId): HistoricActivityInstance
+    {
+        $this->taskId = $taskId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAssignee(): string
+    {
+        return $this->assignee;
+    }
+
+    /**
+     * @param string $assignee
+     * @return HistoricActivityInstance
+     */
+    public function setAssignee(string $assignee): HistoricActivityInstance
+    {
+        $this->assignee = $assignee;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCalledProcessInstanceId(): string
+    {
+        return $this->calledProcessInstanceId;
+    }
+
+    /**
+     * @param string $calledProcessInstanceId
+     * @return HistoricActivityInstance
+     */
+    public function setCalledProcessInstanceId(string $calledProcessInstanceId): HistoricActivityInstance
+    {
+        $this->calledProcessInstanceId = $calledProcessInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartTime(): string
     {
         return $this->startTime;
     }
 
     /**
-     * @param mixed $taskId
+     * @param string $startTime
+     * @return HistoricActivityInstance
      */
-    public function setTaskId($taskId)
+    public function setStartTime(string $startTime): HistoricActivityInstance
     {
-        $this->taskId = $taskId;
+        $this->startTime = $startTime;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTaskId()
+    public function getEndTime(): string
     {
-        return $this->taskId;
+        return $this->endTime;
     }
 
+    /**
+     * @param string $endTime
+     * @return HistoricActivityInstance
+     */
+    public function setEndTime(string $endTime): HistoricActivityInstance
+    {
+        $this->endTime = $endTime;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDurationInMillis(): int
+    {
+        return $this->durationInMillis;
+    }
+
+    /**
+     * @param int $durationInMillis
+     * @return HistoricActivityInstance
+     */
+    public function setDurationInMillis(int $durationInMillis): HistoricActivityInstance
+    {
+        $this->durationInMillis = $durationInMillis;
+        return $this;
+    }
 }

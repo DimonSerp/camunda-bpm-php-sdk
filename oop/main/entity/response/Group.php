@@ -9,62 +9,70 @@
 
 namespace org\provectus\php\sdk\entity\response;
 
-
 use org\provectus\php\sdk\helper\CastHelper;
 
 class Group extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $type;
 
     /**
-     * @param mixed $id
+     * @return string
      */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $name
+     * @param string $id
+     * @return Group
      */
-    public function setName($name)
+    public function setId(string $id): Group
     {
-        $this->name = $name;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $type
+     * @param string $name
+     * @return Group
      */
-    public function setType($type)
+    public function setName(string $name): Group
     {
-        $this->type = $type;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
-
+    /**
+     * @param string $type
+     * @return Group
+     */
+    public function setType(string $type): Group
+    {
+        $this->type = $type;
+        return $this;
+    }
 }

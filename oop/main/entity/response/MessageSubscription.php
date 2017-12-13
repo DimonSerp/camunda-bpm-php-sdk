@@ -13,108 +13,129 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class MessageSubscription extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $eventType;
+
+    /** @var string */
     protected $eventName;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $activityId;
 
     /**
-     * @param mixed $activityId
+     * @return string
      */
-    public function setActivityId($activityId)
-    {
-        $this->activityId = $activityId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityId()
-    {
-        return $this->activityId;
-    }
-
-    /**
-     * @param mixed $eventName
-     */
-    public function setEventName($eventName)
-    {
-        $this->eventName = $eventName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEventName()
-    {
-        return $this->eventName;
-    }
-
-    /**
-     * @param mixed $eventType
-     */
-    public function setEventType($eventType)
-    {
-        $this->eventType = $eventType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEventType()
-    {
-        return $this->eventType;
-    }
-
-    /**
-     * @param mixed $executionId
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $id
+     * @return MessageSubscription
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setId(string $id): MessageSubscription
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getEventType(): string
+    {
+        return $this->eventType;
+    }
+
+    /**
+     * @param string $eventType
+     * @return MessageSubscription
+     */
+    public function setEventType(string $eventType): MessageSubscription
+    {
+        $this->eventType = $eventType;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return $this->eventName;
+    }
+
+    /**
+     * @param string $eventName
+     * @return MessageSubscription
+     */
+    public function setEventName(string $eventName): MessageSubscription
+    {
+        $this->eventName = $eventName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return MessageSubscription
+     */
+    public function setExecutionId(string $executionId): MessageSubscription
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
+    /**
+     * @param string $processInstanceId
+     * @return MessageSubscription
+     */
+    public function setProcessInstanceId(string $processInstanceId): MessageSubscription
+    {
+        $this->processInstanceId = $processInstanceId;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getActivityId(): string
+    {
+        return $this->activityId;
+    }
+
+    /**
+     * @param string $activityId
+     * @return MessageSubscription
+     */
+    public function setActivityId(string $activityId): MessageSubscription
+    {
+        $this->activityId = $activityId;
+        return $this;
+    }
 }

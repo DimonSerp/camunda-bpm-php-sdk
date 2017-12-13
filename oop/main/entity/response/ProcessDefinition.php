@@ -13,176 +13,234 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class ProcessDefinition extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $key;
+
+    /** @var string */
     protected $category;
+
+    /** @var string */
     protected $description;
+
+    /** @var string */
     protected $name;
+
+    /** @var int */
     protected $version;
+
+    /** @var string */
     protected $resource;
+
+    /** @var string */
     protected $deploymentId;
+
+    /** @var string */
     protected $diagram;
+
+    /** @var bool */
     protected $suspended;
 
-    /**
-     * @param mixed $category
-     */
-    public function setCategory($category)
-    {
-        $this->category = $category;
-    }
+    /** @var string */
+    protected $tenantId;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * @param mixed $deploymentId
-     */
-    public function setDeploymentId($deploymentId)
-    {
-        $this->deploymentId = $deploymentId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDeploymentId()
-    {
-        return $this->deploymentId;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $diagram
-     */
-    public function setDiagram($diagram)
-    {
-        $this->diagram = $diagram;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDiagram()
-    {
-        return $this->diagram;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $key
+     * @param string $id
+     * @return ProcessDefinition
      */
-    public function setKey($key)
+    public function setId(string $id): ProcessDefinition
     {
-        $this->key = $key;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getKey()
+    public function getKey(): string
     {
         return $this->key;
     }
 
     /**
-     * @param mixed $name
+     * @param string $key
+     * @return ProcessDefinition
      */
-    public function setName($name)
+    public function setKey(string $key): ProcessDefinition
     {
-        $this->name = $name;
+        $this->key = $key;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getCategory(): string
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param string $category
+     * @return ProcessDefinition
+     */
+    public function setCategory(string $category): ProcessDefinition
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     * @return ProcessDefinition
+     */
+    public function setDescription(string $description): ProcessDefinition
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $resource
+     * @param string $name
+     * @return ProcessDefinition
      */
-    public function setResource($resource)
+    public function setName(string $name): ProcessDefinition
     {
-        $this->resource = $resource;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getResource()
+    public function getVersion(): int
+    {
+        return $this->version;
+    }
+
+    /**
+     * @param int $version
+     * @return ProcessDefinition
+     */
+    public function setVersion(int $version): ProcessDefinition
+    {
+        $this->version = $version;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResource(): string
     {
         return $this->resource;
     }
 
     /**
-     * @param mixed $suspended
+     * @param string $resource
+     * @return ProcessDefinition
      */
-    public function setSuspended($suspended)
+    public function setResource(string $resource): ProcessDefinition
     {
-        $this->suspended = $suspended;
+        $this->resource = $resource;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getSuspended()
+    public function getDeploymentId(): string
+    {
+        return $this->deploymentId;
+    }
+
+    /**
+     * @param string $deploymentId
+     * @return ProcessDefinition
+     */
+    public function setDeploymentId(string $deploymentId): ProcessDefinition
+    {
+        $this->deploymentId = $deploymentId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiagram(): string
+    {
+        return $this->diagram;
+    }
+
+    /**
+     * @param string $diagram
+     * @return ProcessDefinition
+     */
+    public function setDiagram(string $diagram): ProcessDefinition
+    {
+        $this->diagram = $diagram;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSuspended(): bool
     {
         return $this->suspended;
     }
 
     /**
-     * @param mixed $version
+     * @param bool $suspended
+     * @return ProcessDefinition
      */
-    public function setVersion($version)
+    public function setSuspended(bool $suspended): ProcessDefinition
     {
-        $this->version = $version;
+        $this->suspended = $suspended;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getVersion()
+    public function getTenantId(): string
     {
-        return $this->version;
+        return $this->tenantId;
     }
 
-
+    /**
+     * @param string $tenantId
+     * @return ProcessDefinition
+     */
+    public function setTenantId(string $tenantId): ProcessDefinition
+    {
+        $this->tenantId = $tenantId;
+        return $this;
+    }
 }

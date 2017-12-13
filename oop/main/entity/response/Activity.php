@@ -41,148 +41,164 @@ class Activity extends CastHelper
     protected $executionIds;
 
     /**
-     * @param mixed $activityId
+     * @return string
      */
-    public function setActivityId($activityId)
-    {
-        $this->activityId = $activityId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityId()
-    {
-        return $this->activityId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityName()
-    {
-        return $this->activityName;
-    }
-
-    /**
-     * @param mixed $activityName
-     */
-    public function setActivityName($activityName): void
-    {
-        $this->activityName = $activityName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityType()
-    {
-        return $this->activityType;
-    }
-
-    /**
-     * @param mixed $activityType
-     */
-    public function setActivityType($activityType): void
-    {
-        $this->activityType = $activityType;
-    }
-
-    /**
-     * @param mixed $childActivityInstances
-     */
-    public function setChildActivityInstances($childActivityInstances)
-    {
-        $this->childActivityInstances = $childActivityInstances;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getChildActivityInstances()
-    {
-        return $this->childActivityInstances;
-    }
-
-    /**
-     * @param mixed $childTransitionInstances
-     */
-    public function setChildTransitionInstances($childTransitionInstances)
-    {
-        $this->childTransitionInstances = $childTransitionInstances;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getChildTransitionInstances()
-    {
-        return $this->childTransitionInstances;
-    }
-
-    /**
-     * @param mixed $executionIds
-     */
-    public function setExecutionIds($executionIds)
-    {
-        $this->executionIds = $executionIds;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionIds()
-    {
-        return $this->executionIds;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $processDefinitionId
+     * @param string $id
+     * @return Activity
      */
-    public function setProcessDefinitionId($processDefinitionId)
+    public function setId(string $id): Activity
     {
-        $this->processDefinitionId = $processDefinitionId;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionId()
+    public function getActivityId(): string
+    {
+        return $this->activityId;
+    }
+
+    /**
+     * @param string $activityId
+     * @return Activity
+     */
+    public function setActivityId(string $activityId): Activity
+    {
+        $this->activityId = $activityId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivityName(): string
+    {
+        return $this->activityName;
+    }
+
+    /**
+     * @param string $activityName
+     * @return Activity
+     */
+    public function setActivityName(string $activityName): Activity
+    {
+        $this->activityName = $activityName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivityType(): string
+    {
+        return $this->activityType;
+    }
+
+    /**
+     * @param string $activityType
+     * @return Activity
+     */
+    public function setActivityType(string $activityType): Activity
+    {
+        $this->activityType = $activityType;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
+    {
+        return $this->processInstanceId;
+    }
+
+    /**
+     * @param string $processInstanceId
+     * @return Activity
+     */
+    public function setProcessInstanceId(string $processInstanceId): Activity
+    {
+        $this->processInstanceId = $processInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProcessDefinitionId(): string
     {
         return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $processDefinitionId
+     * @return Activity
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessDefinitionId(string $processDefinitionId): Activity
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->processDefinitionId = $processDefinitionId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getProcessInstanceId()
+    public function getChildActivityInstances(): array
     {
-        return $this->processInstanceId;
+        return $this->childActivityInstances;
     }
 
+    /**
+     * @param array $childActivityInstances
+     * @return Activity
+     */
+    public function setChildActivityInstances(array $childActivityInstances): Activity
+    {
+        $this->childActivityInstances = $childActivityInstances;
+        return $this;
+    }
 
+    /**
+     * @return array
+     */
+    public function getChildTransitionInstances(): array
+    {
+        return $this->childTransitionInstances;
+    }
+
+    /**
+     * @param array $childTransitionInstances
+     * @return Activity
+     */
+    public function setChildTransitionInstances(array $childTransitionInstances): Activity
+    {
+        $this->childTransitionInstances = $childTransitionInstances;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getExecutionIds(): array
+    {
+        return $this->executionIds;
+    }
+
+    /**
+     * @param array $executionIds
+     * @return Activity
+     */
+    public function setExecutionIds(array $executionIds): Activity
+    {
+        $this->executionIds = $executionIds;
+        return $this;
+    }
 }

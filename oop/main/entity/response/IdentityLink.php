@@ -14,57 +14,66 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class IdentityLink extends CastHelper
 {
+    /** @var string */
     protected $userId;
+
+    /** @var string */
     protected $groupId;
+
+    /** @var string */
     protected $type;
 
     /**
-     * @param mixed $groupId
+     * @return string
      */
-    public function setGroupId($groupId)
+    public function getUserId(): string
     {
-        $this->groupId = $groupId;
+        return $this->userId;
     }
 
     /**
-     * @return mixed
+     * @param string $userId
+     * @return IdentityLink
      */
-    public function getGroupId()
+    public function setUserId(string $userId): IdentityLink
+    {
+        $this->userId = $userId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroupId(): string
     {
         return $this->groupId;
     }
 
     /**
-     * @param mixed $type
+     * @param string $groupId
+     * @return IdentityLink
      */
-    public function setType($type)
+    public function setGroupId(string $groupId): IdentityLink
     {
-        $this->type = $type;
+        $this->groupId = $groupId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $userId
+     * @param string $type
+     * @return IdentityLink
      */
-    public function setUserId($userId)
+    public function setType(string $type): IdentityLink
     {
-        $this->userId = $userId;
+        $this->type = $type;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-
 }

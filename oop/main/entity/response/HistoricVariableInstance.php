@@ -14,74 +14,87 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class HistoricVariableInstance extends CastHelper
 {
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $type;
+
+    /** @var string */
     protected $value;
+
+    /** @var string */
     protected $processInstanceId;
 
     /**
-     * @param mixed $name
+     * @return string
      */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $name
+     * @return HistoricVariableInstance
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setName(string $name): HistoricVariableInstance
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
-    {
-        return $this->processInstanceId;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $value
+     * @param string $type
+     * @return HistoricVariableInstance
      */
-    public function setValue($value)
+    public function setType(string $type): HistoricVariableInstance
     {
-        $this->value = $value;
+        $this->type = $type;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
 
+    /**
+     * @param string $value
+     * @return HistoricVariableInstance
+     */
+    public function setValue(string $value): HistoricVariableInstance
+    {
+        $this->value = $value;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
+    {
+        return $this->processInstanceId;
+    }
+
+    /**
+     * @param string $processInstanceId
+     * @return HistoricVariableInstance
+     */
+    public function setProcessInstanceId(string $processInstanceId): HistoricVariableInstance
+    {
+        $this->processInstanceId = $processInstanceId;
+        return $this;
+    }
 }

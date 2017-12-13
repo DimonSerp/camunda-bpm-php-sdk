@@ -13,261 +13,360 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Task extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $key;
+
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $assignee;
+
+    /** @var string */
     protected $created;
+
+    /** @var string */
     protected $due;
+
+    /** @var string */
     protected $delegationState;
+
+    /** @var string */
     protected $description;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $owner;
+
+    /** @var string */
     protected $parentTaskId;
+
+    /** @var int */
     protected $priority;
+
+    /** @var string */
     protected $processDefinitionId;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $taskDefinitionId;
 
-    /**
-     * @param mixed $assignee
-     */
-    public function setAssignee($assignee)
-    {
-        $this->assignee = $assignee;
-    }
+    /** @var string */
+    protected $formKey;
+
+    /** @var string */
+    protected $tenantId;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getAssignee()
-    {
-        return $this->assignee;
-    }
-
-    /**
-     * @param mixed $created
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * @param mixed $delegationState
-     */
-    public function setDelegationState($delegationState)
-    {
-        $this->delegationState = $delegationState;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDelegationState()
-    {
-        return $this->delegationState;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $due
-     */
-    public function setDue($due)
-    {
-        $this->due = $due;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDue()
-    {
-        return $this->due;
-    }
-
-    /**
-     * @param mixed $executionId
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $key
+     * @param string $id
+     * @return Task
      */
-    public function setKey($key)
+    public function setId(string $id): Task
     {
-        $this->key = $key;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getKey()
+    public function getKey(): string
     {
         return $this->key;
     }
 
     /**
-     * @param mixed $name
+     * @param string $key
+     * @return Task
      */
-    public function setName($name)
+    public function setKey(string $key): Task
     {
-        $this->name = $name;
+        $this->key = $key;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $owner
+     * @param string $name
+     * @return Task
      */
-    public function setOwner($owner)
+    public function setName(string $name): Task
     {
-        $this->owner = $owner;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getOwner()
+    public function getAssignee(): string
+    {
+        return $this->assignee;
+    }
+
+    /**
+     * @param string $assignee
+     * @return Task
+     */
+    public function setAssignee(string $assignee): Task
+    {
+        $this->assignee = $assignee;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreated(): string
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param string $created
+     * @return Task
+     */
+    public function setCreated(string $created): Task
+    {
+        $this->created = $created;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDue(): string
+    {
+        return $this->due;
+    }
+
+    /**
+     * @param string $due
+     * @return Task
+     */
+    public function setDue(string $due): Task
+    {
+        $this->due = $due;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDelegationState(): string
+    {
+        return $this->delegationState;
+    }
+
+    /**
+     * @param string $delegationState
+     * @return Task
+     */
+    public function setDelegationState(string $delegationState): Task
+    {
+        $this->delegationState = $delegationState;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     * @return Task
+     */
+    public function setDescription(string $description): Task
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return Task
+     */
+    public function setExecutionId(string $executionId): Task
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwner(): string
     {
         return $this->owner;
     }
 
     /**
-     * @param mixed $parentTaskId
+     * @param string $owner
+     * @return Task
      */
-    public function setParentTaskId($parentTaskId)
+    public function setOwner(string $owner): Task
     {
-        $this->parentTaskId = $parentTaskId;
+        $this->owner = $owner;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getParentTaskId()
+    public function getParentTaskId(): string
     {
         return $this->parentTaskId;
     }
 
     /**
-     * @param mixed $priority
+     * @param string $parentTaskId
+     * @return Task
      */
-    public function setPriority($priority)
+    public function setParentTaskId(string $parentTaskId): Task
     {
-        $this->priority = $priority;
+        $this->parentTaskId = $parentTaskId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getPriority()
+    public function getPriority(): int
     {
         return $this->priority;
     }
 
     /**
-     * @param mixed $processDefinitionId
+     * @param int $priority
+     * @return Task
      */
-    public function setProcessDefinitionId($processDefinitionId)
+    public function setPriority(int $priority): Task
     {
-        $this->processDefinitionId = $processDefinitionId;
+        $this->priority = $priority;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessDefinitionId()
+    public function getProcessDefinitionId(): string
     {
         return $this->processDefinitionId;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $processDefinitionId
+     * @return Task
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setProcessDefinitionId(string $processDefinitionId): Task
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->processDefinitionId = $processDefinitionId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $taskDefinitionId
+     * @param string $processInstanceId
+     * @return Task
      */
-    public function setTaskDefinitionId($taskDefinitionId)
+    public function setProcessInstanceId(string $processInstanceId): Task
     {
-        $this->taskDefinitionId = $taskDefinitionId;
+        $this->processInstanceId = $processInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTaskDefinitionId()
+    public function getTaskDefinitionId(): string
     {
         return $this->taskDefinitionId;
     }
 
+    /**
+     * @param string $taskDefinitionId
+     * @return Task
+     */
+    public function setTaskDefinitionId(string $taskDefinitionId): Task
+    {
+        $this->taskDefinitionId = $taskDefinitionId;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getFormKey(): string
+    {
+        return $this->formKey;
+    }
+
+    /**
+     * @param string $formKey
+     * @return Task
+     */
+    public function setFormKey(string $formKey): Task
+    {
+        $this->formKey = $formKey;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTenantId(): string
+    {
+        return $this->tenantId;
+    }
+
+    /**
+     * @param string $tenantId
+     * @return Task
+     */
+    public function setTenantId(string $tenantId): Task
+    {
+        $this->tenantId = $tenantId;
+        return $this;
+    }
 }

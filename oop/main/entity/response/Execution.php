@@ -13,106 +13,87 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class Execution extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $processInstanceId;
-    protected $definitionId;
-    protected $businessKey;
-    protected $suspended;
+
+    /** @var bool */
     protected $ended;
 
-    /**
-     * @param mixed $businessKey
-     */
-    public function setBusinessKey($businessKey)
-    {
-        $this->businessKey = $businessKey;
-    }
+    /** @var string */
+    protected $tenantId;
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getBusinessKey()
-    {
-        return $this->businessKey;
-    }
-
-    /**
-     * @param mixed $definitionId
-     */
-    public function setDefinitionId($definitionId)
-    {
-        $this->definitionId = $definitionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDefinitionId()
-    {
-        return $this->definitionId;
-    }
-
-    /**
-     * @param mixed $ended
-     */
-    public function setEnded($ended)
-    {
-        $this->ended = $ended;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEnded()
-    {
-        return $this->ended;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $id
+     * @return Execution
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setId(string $id): Execution
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
+    public function getProcessInstanceId(): string
     {
         return $this->processInstanceId;
     }
 
     /**
-     * @param mixed $suspended
+     * @param string $processInstanceId
+     * @return Execution
      */
-    public function setSuspended($suspended)
+    public function setProcessInstanceId(string $processInstanceId): Execution
     {
-        $this->suspended = $suspended;
+        $this->processInstanceId = $processInstanceId;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
-    public function getSuspended()
+    public function isEnded(): bool
     {
-        return $this->suspended;
+        return $this->ended;
+    }
+
+    /**
+     * @param bool $ended
+     * @return Execution
+     */
+    public function setEnded(bool $ended): Execution
+    {
+        $this->ended = $ended;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTenantId(): string
+    {
+        return $this->tenantId;
+    }
+
+    /**
+     * @param string $tenantId
+     * @return Execution
+     */
+    public function setTenantId(string $tenantId): Execution
+    {
+        $this->tenantId = $tenantId;
+        return $this;
     }
 }

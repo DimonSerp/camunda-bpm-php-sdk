@@ -13,108 +13,150 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class ProcessInstance extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var string */
     protected $definitionId;
+
+    /** @var string */
     protected $businessKey;
+
+    /** @var bool */
     protected $ended;
+
+    /** @var bool */
     protected $suspended;
-    protected $links;
+
+    /** @var string */
+    protected $tenantId;
+
+    /** @var array */
+    protected $links = [];
 
     /**
-     * @param mixed $businessKey
+     * @return string
      */
-    public function setBusinessKey($businessKey)
-    {
-        $this->businessKey = $businessKey;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBusinessKey()
-    {
-        return $this->businessKey;
-    }
-
-    /**
-     * @param mixed $definitionId
-     */
-    public function setDefinitionId($definitionId)
-    {
-        $this->definitionId = $definitionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDefinitionId()
-    {
-        return $this->definitionId;
-    }
-
-    /**
-     * @param mixed $ended
-     */
-    public function setEnded($ended)
-    {
-        $this->ended = $ended;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEnded()
-    {
-        return $this->ended;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $links
+     * @param string $id
+     * @return ProcessInstance
      */
-    public function setLinks($links)
+    public function setId(string $id): ProcessInstance
     {
-        $this->links = $links;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getLinks()
+    public function getDefinitionId(): string
+    {
+        return $this->definitionId;
+    }
+
+    /**
+     * @param string $definitionId
+     * @return ProcessInstance
+     */
+    public function setDefinitionId(string $definitionId): ProcessInstance
+    {
+        $this->definitionId = $definitionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBusinessKey(): string
+    {
+        return $this->businessKey;
+    }
+
+    /**
+     * @param string $businessKey
+     * @return ProcessInstance
+     */
+    public function setBusinessKey(string $businessKey): ProcessInstance
+    {
+        $this->businessKey = $businessKey;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnded(): bool
+    {
+        return $this->ended;
+    }
+
+    /**
+     * @param bool $ended
+     * @return ProcessInstance
+     */
+    public function setEnded(bool $ended): ProcessInstance
+    {
+        $this->ended = $ended;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSuspended(): bool
+    {
+        return $this->suspended;
+    }
+
+    /**
+     * @param bool $suspended
+     * @return ProcessInstance
+     */
+    public function setSuspended(bool $suspended): ProcessInstance
+    {
+        $this->suspended = $suspended;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTenantId(): string
+    {
+        return $this->tenantId;
+    }
+
+    /**
+     * @param string $tenantId
+     * @return ProcessInstance
+     */
+    public function setTenantId(string $tenantId): ProcessInstance
+    {
+        $this->tenantId = $tenantId;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getLinks(): array
     {
         return $this->links;
     }
 
     /**
-     * @param mixed $suspended
+     * @param array $links
+     * @return ProcessInstance
      */
-    public function setSuspended($suspended)
+    public function setLinks(array $links): ProcessInstance
     {
-        $this->suspended = $suspended;
+        $this->links = $links;
+        return $this;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getSuspended()
-    {
-        return $this->suspended;
-    }
-
-
 }

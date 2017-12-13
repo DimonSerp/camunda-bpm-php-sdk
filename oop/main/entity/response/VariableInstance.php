@@ -9,130 +9,154 @@
 
 namespace org\provectus\php\sdk\entity\response;
 
-
 use org\provectus\php\sdk\helper\CastHelper;
 
 class VariableInstance extends CastHelper
 {
+    /** @var string */
     protected $name;
+
+    /** @var string */
     protected $type;
+
+    /** @var string */
     protected $value;
+
+    /** @var string */
     protected $processInstanceId;
+
+    /** @var string */
     protected $executionId;
+
+    /** @var string */
     protected $taskId;
+
+    /** @var string */
     protected $activityInstanceId;
 
     /**
-     * @param mixed $activityInstanceId
+     * @return string
      */
-    public function setActivityInstanceId($activityInstanceId)
-    {
-        $this->activityInstanceId = $activityInstanceId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getActivityInstanceId()
-    {
-        return $this->activityInstanceId;
-    }
-
-    /**
-     * @param mixed $executionId
-     */
-    public function setExecutionId($executionId)
-    {
-        $this->executionId = $executionId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getExecutionId()
-    {
-        return $this->executionId;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $processInstanceId
+     * @param string $name
+     * @return VariableInstance
      */
-    public function setProcessInstanceId($processInstanceId)
+    public function setName(string $name): VariableInstance
     {
-        $this->processInstanceId = $processInstanceId;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getProcessInstanceId()
-    {
-        return $this->processInstanceId;
-    }
-
-    /**
-     * @param mixed $taskId
-     */
-    public function setTaskId($taskId)
-    {
-        $this->taskId = $taskId;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTaskId()
-    {
-        return $this->taskId;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
     /**
-     * @param mixed $value
+     * @param string $type
+     * @return VariableInstance
      */
-    public function setValue($value)
+    public function setType(string $type): VariableInstance
     {
-        $this->value = $value;
+        $this->type = $type;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getValue()
+    public function getValue(): string
     {
         return $this->value;
     }
 
+    /**
+     * @param string $value
+     * @return VariableInstance
+     */
+    public function setValue(string $value): VariableInstance
+    {
+        $this->value = $value;
+        return $this;
+    }
 
+    /**
+     * @return string
+     */
+    public function getProcessInstanceId(): string
+    {
+        return $this->processInstanceId;
+    }
+
+    /**
+     * @param string $processInstanceId
+     * @return VariableInstance
+     */
+    public function setProcessInstanceId(string $processInstanceId): VariableInstance
+    {
+        $this->processInstanceId = $processInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExecutionId(): string
+    {
+        return $this->executionId;
+    }
+
+    /**
+     * @param string $executionId
+     * @return VariableInstance
+     */
+    public function setExecutionId(string $executionId): VariableInstance
+    {
+        $this->executionId = $executionId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaskId(): string
+    {
+        return $this->taskId;
+    }
+
+    /**
+     * @param string $taskId
+     * @return VariableInstance
+     */
+    public function setTaskId(string $taskId): VariableInstance
+    {
+        $this->taskId = $taskId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getActivityInstanceId(): string
+    {
+        return $this->activityInstanceId;
+    }
+
+    /**
+     * @param string $activityInstanceId
+     * @return VariableInstance
+     */
+    public function setActivityInstanceId(string $activityInstanceId): VariableInstance
+    {
+        $this->activityInstanceId = $activityInstanceId;
+        return $this;
+    }
 }

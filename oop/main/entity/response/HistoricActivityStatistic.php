@@ -13,97 +13,108 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class HistoricActivityStatistic extends CastHelper
 {
+    /** @var string */
     protected $id;
+
+    /** @var int */
     protected $instances;
+
+    /** @var int */
     protected $canceled;
+
+    /** @var int */
     protected $finished;
+
+    /** @var int */
     protected $completeScope;
 
     /**
-     * @param mixed $id
+     * @return string
      */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $instances
+     * @param string $id
+     * @return HistoricActivityStatistic
      */
-    public function setInstances($instances)
+    public function setId(string $id): HistoricActivityStatistic
     {
-        $this->instances = $instances;
+        $this->id = $id;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getInstances()
+    public function getInstances(): int
     {
         return $this->instances;
     }
 
     /**
-     * @param mixed $canceled
-     * @return $this
+     * @param int $instances
+     * @return HistoricActivityStatistic
      */
-    public function setCanceled($canceled)
+    public function setInstances(int $instances): HistoricActivityStatistic
+    {
+        $this->instances = $instances;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCanceled(): int
+    {
+        return $this->canceled;
+    }
+
+    /**
+     * @param int $canceled
+     * @return HistoricActivityStatistic
+     */
+    public function setCanceled(int $canceled): HistoricActivityStatistic
     {
         $this->canceled = $canceled;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getCanceled()
+    public function getFinished(): int
     {
-        return $this->canceled;
+        return $this->finished;
     }
 
     /**
-     * @param mixed $finished
-     * @return $this
+     * @param int $finished
+     * @return HistoricActivityStatistic
      */
-    public function setFinished($finished)
+    public function setFinished(int $finished): HistoricActivityStatistic
     {
         $this->finished = $finished;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getFinished()
-    {
-        return $this->finished;
-    }
-
-    /**
-     * @param mixed $completeScope
-     * @return $this
-     */
-    public function setCompleteScope($completeScope)
-    {
-        $this->completeScope = $completeScope;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCompleteScope()
+    public function getCompleteScope(): int
     {
         return $this->completeScope;
     }
 
-
+    /**
+     * @param int $completeScope
+     * @return HistoricActivityStatistic
+     */
+    public function setCompleteScope(int $completeScope): HistoricActivityStatistic
+    {
+        $this->completeScope = $completeScope;
+        return $this;
+    }
 }

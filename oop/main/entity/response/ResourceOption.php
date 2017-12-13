@@ -14,21 +14,24 @@ use org\provectus\php\sdk\helper\CastHelper;
 
 class ResourceOption extends CastHelper
 {
+    /** @var array */
     protected $links;
 
     /**
-     * @param mixed $links
+     * @return array
      */
-    public function setLinks($links)
+    public function getLinks(): array
     {
-        $this->links = $links;
+        return $this->links;
     }
 
     /**
-     * @return mixed
+     * @param array $links
+     * @return ResourceOption
      */
-    public function getLinks()
+    public function setLinks(array $links): ResourceOption
     {
-        return $this->links;
+        $this->links = $links;
+        return $this;
     }
 }
