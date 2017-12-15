@@ -17,7 +17,7 @@ class DeploymentService extends RequestService
      * @throws CamundaApiException
      * @return mixed server response
      */
-    public function deploy(string $name, string $bpmnFilePath)
+    public function deploy(string $name, string $bpmnFilePath): DeploymentWithDefinitions
     {
         if (!is_file($bpmnFilePath)) {
             throw new CamundaApiException('BPMN file path not correct!');
