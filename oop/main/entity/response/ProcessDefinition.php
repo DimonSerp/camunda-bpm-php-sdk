@@ -105,7 +105,7 @@ class ProcessDefinition extends CastHelper
      */
     public function getDescription(): string
     {
-        return $this->description;
+        return (is_null($this->description)) ? '' : $this->description;
     }
 
     /**
@@ -191,9 +191,9 @@ class ProcessDefinition extends CastHelper
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDiagram(): string
+    public function getDiagram(): ?string
     {
         return $this->diagram;
     }
