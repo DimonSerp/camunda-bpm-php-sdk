@@ -128,9 +128,8 @@ class RequestService
      * executes the rest request
      *
      * @throws CamundaApiException
-     * @return \stdClass|null server response
      */
-    protected function execute(): ?\stdClass
+    protected function execute()
     {
         $this->restApiUrl = preg_replace('/\/$/', '', $this->restApiUrl);
 
