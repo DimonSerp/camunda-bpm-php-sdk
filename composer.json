@@ -1,5 +1,5 @@
 {
-  "name": "provectus/camunda-bpm-php7",
+  "name": "plusnet/camunda-bpm-php7",
   "description": "PHP 7.x SDK for camundaBPM process services by Provectus inc.",
   "license": "Apache-2.0",
   "minimum-stability": "stable",
@@ -35,5 +35,16 @@
     "classmap": [
       "oop/main/"
     ]
+  },
+  "extra": {
+    "nexus-push": {
+      "url": "https://nexus.devops.plusnet.de/repository/plusnet-composer/",
+      "username": "deployer",
+      "password": "deployer",
+      "ignore-by-git-attributes": true,
+      "ignore": [
+        "oop/tests/"
+      ]
+    }
   }
 }
