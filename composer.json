@@ -7,6 +7,10 @@
   "homepage": "http://camunda.org",
   "authors": [
     {
+      "name": "Christian Frantzen",
+      "email": "soulzterx@gmail.com"
+    },
+    {
       "name": "Dmytriy Serpokrylenko",
       "email": "dserpokrylenko@provectus.com"
     },
@@ -21,6 +25,7 @@
   },
 
   "require-dev": {
+    "elendev/nexus-composer-push": "^0.1.3",
     "phpunit/phpunit": "~6.0.0"
   },
 
