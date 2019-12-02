@@ -9,6 +9,8 @@
 
 namespace org\provectus\CamundaSDK\service;
 
+use org\provectus\CamundaSDK\entity\request\HistoricDetailRequest;
+use org\provectus\CamundaSDK\entity\response\HistoricDetail;
 use org\provectus\CamundaSDK\exception\CamundaApiException;
 use org\provectus\CamundaSDK\entity\request\HistoricActivityInstanceRequest;
 use org\provectus\CamundaSDK\entity\request\HistoricProcessInstanceRequest;
@@ -42,6 +44,34 @@ class HistoryService extends RequestService
             $response = [];
             foreach ($prepare as $index => $data) {
                 $historicActivityInstance = new HistoricActivityInstance();
+                $response[$index] = $historicActivityInstance->cast($data);
+            }
+            return $response;
+        } catch (CamundaApiException $e) {
+            throw $e;
+        }
+    }
+
+    /**
+     * Query for historic activity instances that fulfill the given parameters.
+     *
+     * @link http://docs.camunda.org/latest/api-references/rest/#history-get-activity-instances-historic
+     *
+     * @param HistoricDetailRequest $request
+     * @return HistoricActivityInstance[]
+     * @throws CamundaApiException
+     */
+    public function getHistoricDetail(HistoricDetailRequest $request): array
+    {
+        $this->setRequestUrl('/history/detail');
+        $this->setRequestObject($request);
+        $this->setRequestMethod('GET');
+
+        try {
+            $prepare = $this->execute();
+            $response = [];
+            foreach ($prepare as $index => $data) {
+                $historicActivityInstance = new HistoricDetail();
                 $response[$index] = $historicActivityInstance->cast($data);
             }
             return $response;
