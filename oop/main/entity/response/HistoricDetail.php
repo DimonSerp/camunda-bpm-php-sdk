@@ -49,6 +49,30 @@ class HistoricDetail extends CastHelper
     /** @var string */
     protected $time;
 
+    // this is for variable updates
+    // TODO: move this into a separate class
+
+    /** @var string */
+    protected $variableName;
+
+    /** @var string */
+    protected $variableInstanceId;
+
+    /** @var string */
+    protected $variableType;
+
+    /** @var mixed */
+    protected $value;
+
+    /** @var array */
+    protected $valueInfo;
+
+    /** @var integer */
+    protected $revision;
+
+    /** @var string */
+    protected $errorMessage;
+
     /**
      * @return string
      */
@@ -264,4 +288,24 @@ class HistoricDetail extends CastHelper
         $this->time = $time;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getVariableName(): string
+    {
+        return $this->variableName;
+    }
+
+    /**
+     * @param string $variableName
+     * @return HistoricDetail
+     */
+    public function setVariableName(string $variableName): HistoricDetail
+    {
+        $this->variableName = $variableName;
+        return $this;
+    }
+
+
 }
