@@ -29,6 +29,9 @@ class HistoricDetail extends CastHelper
     protected $processInstanceId;
 
     /** @var string */
+    protected $activityInstanceId;
+
+    /** @var string */
     protected $executionId;
 
     /** @var string */
@@ -307,5 +310,129 @@ class HistoricDetail extends CastHelper
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getActivityInstanceId(): string
+    {
+        return $this->activityInstanceId;
+    }
 
+    /**
+     * @param string $activityInstanceId
+     * @return HistoricDetail
+     */
+    public function setActivityInstanceId(string $activityInstanceId): HistoricDetail
+    {
+        $this->activityInstanceId = $activityInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVariableInstanceId(): string
+    {
+        return $this->variableInstanceId;
+    }
+
+    /**
+     * @param string $variableInstanceId
+     * @return HistoricDetail
+     */
+    public function setVariableInstanceId(string $variableInstanceId): HistoricDetail
+    {
+        $this->variableInstanceId = $variableInstanceId;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVariableType(): string
+    {
+        return $this->variableType;
+    }
+
+    /**
+     * @param string $variableType
+     * @return HistoricDetail
+     */
+    public function setVariableType(string $variableType): HistoricDetail
+    {
+        $this->variableType = $variableType;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param mixed $value
+     * @return HistoricDetail
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getValueInfo(): array
+    {
+        return $this->valueInfo;
+    }
+
+    /**
+     * @param array $valueInfo
+     * @return HistoricDetail
+     */
+    public function setValueInfo(array $valueInfo): HistoricDetail
+    {
+        $this->valueInfo = $valueInfo;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRevision(): int
+    {
+        return $this->revision;
+    }
+
+    /**
+     * @param int $revision
+     * @return HistoricDetail
+     */
+    public function setRevision(int $revision): HistoricDetail
+    {
+        $this->revision = $revision;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getErrorMessage(): string
+    {
+        return $this->errorMessage;
+    }
+
+    /**
+     * @param string $errorMessage
+     * @return HistoricDetail
+     */
+    public function setErrorMessage(string $errorMessage): HistoricDetail
+    {
+        $this->errorMessage = $errorMessage;
+        return $this;
+    }
 }
