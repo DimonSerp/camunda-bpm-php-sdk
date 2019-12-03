@@ -22,7 +22,7 @@ class HistoricActivityInstance extends CastHelper
     /** @var string */
     protected $activityId;
 
-    /** @var string */
+    /** @var string|null */
     protected $activityName;
 
     /** @var string */
@@ -110,18 +110,18 @@ class HistoricActivityInstance extends CastHelper
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getActivityName(): string
+    public function getActivityName(): ?string
     {
         return $this->activityName;
     }
 
     /**
-     * @param string $activityName
+     * @param string|null $activityName
      * @return HistoricActivityInstance
      */
-    public function setActivityName(string $activityName): HistoricActivityInstance
+    public function setActivityName(?string $activityName): HistoricActivityInstance
     {
         $this->activityName = $activityName;
         return $this;
